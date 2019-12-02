@@ -7,7 +7,7 @@
 
 name: G-DOCK2.0
 
-#on: 
+on: 
   release:
     types: [published]
   push:
