@@ -10,9 +10,9 @@ name: G-DOCK2.0
 on: 
   release:
     types: [published]
-  push:
-    branches: 
-     - master
+  #push:
+  #  branches: 
+  #   - master
 #  schedule:
 #    - cron: 0 8 * * 5
   watch:
@@ -58,7 +58,6 @@ jobs:
       run: |
         chmod +x diy.sh
         ./diy.sh
-        cd openwrt
         [ -e files ] && mv files openwrt/files
         [ -e .config ] && mv .config openwrt
         make defconfig
@@ -72,12 +71,7 @@ jobs:
         cd openwrt
         echo -e "$(nproc) thread build."
         make -j$(nproc) V=s
-    - name: Assemble artifact
-      run: |
-          rm -rf ./artifact/
-          mkdir -p ./artifact/
-          find ./bin/targets/ -regex "*sysupgrade*bin*" | xargs -i mv -f {} ./
-          
+
     - name : Upload artifact
       uses: actions/upload-artifact@master
       with:
