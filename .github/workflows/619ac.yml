@@ -82,4 +82,4 @@ jobs:
       uses: actions/upload-artifact@master
       with:
           name: GDOCK
-          path: ./artifact/
+          path: openwrt/bin/targets
