@@ -73,6 +73,11 @@ jobs:
         echo -e "$(nproc) thread build."
         make -j$(nproc) V=s
 
+    - name: Assemble artifact
+      run: |
+        cd openwrt
+        mkdir G-DOCK
+        find ./bin -name "*sysupgrade.bin"  -type f  -exec mv {}   ./G-DOCK   \;
     - name : Upload artifact
       uses: actions/upload-artifact@master
       with:
