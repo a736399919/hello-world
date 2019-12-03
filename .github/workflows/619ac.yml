@@ -5,7 +5,7 @@
 #   Blog: https://p3terx.com
 #=================================================
 
-name: Y1
+name: newifi y1
 
 on: 
   release:
@@ -78,14 +78,8 @@ jobs:
         mkdir G-DOCK
         find ./bin -name "*sysupgrade.bin"  -type f  -exec mv {}   ./G-DOCK   \;
 
-    - name : Upload artifact
-      uses: actions/upload-artifact@master
-      with:
-          name: GDOCK
-          path: openwrt/bin/targets
-
     - name : Upload artifact1
       uses: actions/upload-artifact@master
       with:
-          name: GDOCK
+          name: newifi-y1
           path: openwrt/G-DOCK
