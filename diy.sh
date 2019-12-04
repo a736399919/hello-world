@@ -10,6 +10,8 @@ git clone -b openwrt-19.07 https://github.com/openwrt/openwrt.git openwrt
 git clone https://github.com/coolsnowwolf/lede lede
 ln -s ../../lede/package/lean ./openwrt/package/
 cd openwrt
+sed -i '/luci/d' feeds.conf.default
+sed -i '$a src-git luci https://github.com/coolsnowwolf/luci' feeds.conf.default
 sed -i '$a src-git extra https://github.com/Andy2244/openwrt-extra.git' feeds.conf.default
 ./scripts/feeds update -a
 ./scripts/feeds install -f -p extra -a
@@ -33,7 +35,7 @@ ln -s ../../luci-app-flowoffload_ADGHome ./package/
 sed -i 's/192.168.1.1/192.168.10.1/g' package/base-files/files/bin/config_generate
 
 #修改机器名称
-sed -i 's/OpenWrt/G-DOCK/g' package/base-files/files/bin/config_generate
+sed -i 's/OpenWrt/Newifi-Y1/g' package/base-files/files/bin/config_generate
 
 #修改wifi名称
 sed -i 's/OpenWrt/FK20100010/g' package/kernel/mac80211/files/lib/wifi/mac80211.sh
