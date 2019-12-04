@@ -6,7 +6,9 @@
 #   Blog: https://p3terx.com
 #=================================================
 #克隆源码
-git clone https://github.com/coolsnowwolf/lede openwrt
+git clone -b openwrt-19.07 https://github.com/openwrt/openwrt.git openwrt
+git clone https://github.com/coolsnowwolf/lede lede
+ln -s ../../lede/package/lean ./openwrt/package/
 cd openwrt
 sed -i '$a src-git extra https://github.com/Andy2244/openwrt-extra.git' feeds.conf.default
 ./scripts/feeds update -a
