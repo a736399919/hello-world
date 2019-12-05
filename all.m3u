@@ -421,8 +421,12 @@ http://cloud-play.hhalloy.com/live/c5d061725e49943973c43a404b913f17.flv
 #EXTINF:-1 group-title="台湾",Bloombreg TV
 http://cloud-play.hhalloy.com/live/ab2450af4c80b52d0810eceaf055abee.flv
 
+#EXTINF:-1 group-title="虎牙电影",山药视频720P
+https://al.hls.huya.com/backsrc/1199511962590-1199511962590-5223053919860555776-2399024048636-10057-A-0-1_1200.m3u8
+#EXTINF:-1 group-title="虎牙电影",山药视频1080P
+https://al.hls.huya.com/backsrc/1199511962590-1199511962590-5223053919860555776-2399024048636-10057-A-0-1_4000.m3u8
 #EXTINF:-1 group-title="虎牙电影",电影-周星驰
-http://aldirect.hls.huya.com/huyalive/94525224-2460685313-10568562945082523648-2789274524-10057-A-0-1_1200.m3u8
+http://aldirect.hls.huya.com/huyalive/94525224-2460685313-10568562945082523648-2789274524-10057-A-0-1.m3u8
 #EXTINF:-1 group-title="虎牙电影",电影-李连杰
 https://js.hls.huya.com/huyalive/94525224-2460686093-10568566295157014528-2789253848-10057-A-0-1_1200.m3u8
 #EXTINF:-1 group-title="虎牙电影",电影-成龙
