@@ -75,11 +75,13 @@ jobs:
     - name: Assemble artifact
       run: |
         cd openwrt
-        mkdir G-DOCK
-        find ./bin -name "*sysupgrade.bin"  -type f  -exec mv {}   ./G-DOCK   \;
+        mkdir Y1
+        find ./bin -name "*sysupgrade.bin"  -type f  -exec mv {}   ./Y1   \;
+        find ./bin -name "config.seed"  -type f  -exec mv {}   ./Y1   \;
+        mv .config Y1
 
     - name : Upload artifact1
       uses: actions/upload-artifact@master
       with:
           name: newifi-y1
-          path: openwrt/G-DOCK
+          path: openwrt/Y1
