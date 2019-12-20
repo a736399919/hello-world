@@ -58,7 +58,7 @@ jobs:
         chmod +x diy.sh
         ./diy.sh
         [ -e files ] && mv files openwrt/files
-        [ -e 1907aria2 ] && mv 1907aria2 openwrt/.config
+        [ -e 1907y1 ] && mv 1907y1 openwrt/.config
         cd openwrt
         make defconfig
     - name: Download package
@@ -75,25 +75,12 @@ jobs:
     - name: Assemble artifact
       run: |
         cd openwrt
-        mkdir -p Y1/1907aria2
-        find ./bin -name "*sysupgrade.bin"  -type f  -exec mv {}   ./Y1/1907aria2   \;
-        
-    - name: Load custom configuration1
-      run: |
-        [ -e 1907y1 ] && mv 1907y1 openwrt/.config
-        cd openwrt
-        make defconfig 
-        echo -e "$(nproc) thread build."
-        make -j$(nproc) V=s
-        
-    - name: Assemble artifact1
-      run: |
-        cd openwrt
         mkdir -p Y1/1907y1
-        find ./bin -name "*sysupgrade.bin"  -type f  -exec mv {}   ./Y1/1907y1   \;  
+        find ./bin -name "*sysupgrade.bin"  -type f  -exec mv {}   ./Y1/1907y1   \;
         
     - name: Load custom configuration1
       run: |
+        rm -rf openwrt/.config
         [ -e ledessr ] && mv ledessr openwrt/.config
         cd openwrt
         make defconfig 
@@ -106,15 +93,15 @@ jobs:
         mkdir -p Y1/ledessr
         find ./bin -name "*sysupgrade.bin"  -type f  -exec mv {}   ./Y1/ledessr   \;    
         
-    - name: Load custom configuration1
+    - name: Load custom configuration2
       run: |
-        [ -e 1907y1 ] && mv 1907y1 openwrt/.config
+        [ -e ledey1 ] && mv ledey1 openwrt/.config
         cd openwrt
         make defconfig 
         echo -e "$(nproc) thread build."
         make -j$(nproc) V=s
         
-    - name: Assemble artifact3
+    - name: Assemble artifact2
       run: |
         cd openwrt
         mkdir -p Y1/ledey1
