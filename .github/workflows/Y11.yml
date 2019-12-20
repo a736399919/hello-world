@@ -78,20 +78,6 @@ jobs:
         mkdir -p Y1/1907y1
         find ./bin -name "*sysupgrade.bin"  -type f  -exec mv {}   ./Y1/1907y1   \;
         
-    - name: Load custom configuration1
-      run: |
-        rm -rf openwrt/.config
-        [ -e ledessr ] && mv ledessr openwrt/.config
-        cd openwrt
-        make defconfig 
-        echo -e "$(nproc) thread build."
-        make -j$(nproc) V=s
-        
-    - name: Assemble artifact1
-      run: |
-        cd openwrt
-        mkdir -p Y1/ledessr
-        find ./bin -name "*sysupgrade.bin"  -type f  -exec mv {}   ./Y1/ledessr   \;    
         
     - name: Load custom configuration2
       run: |
