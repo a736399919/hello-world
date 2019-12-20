@@ -77,7 +77,7 @@ jobs:
         cd openwrt
         mkdir Y1
         find ./bin -name "*sysupgrade.bin"  -type f  -exec mv {}   ./Y1   \;
-        find ./bin -name "config.seed"  -type f  -exec mv {}   ./Y1   \;
+        find ./bin -name "*.seed"  -type f  -exec mv {}   ./Y1   \;
         mv .config Y1
 
     - name : Upload artifact1
