@@ -55,8 +55,8 @@ jobs:
 
     - name: Load custom configuration
       run: |
-        chmod +x diy.sh
-        ./diy.sh
+        chmod +x newifi3.sh
+        ./newifi3.sh
         [ -e newifi3/files ] && mv newifi3/files openwrt/files
         [ -e newifi3/.config ] && mv newifi3/.config openwrt
         cd openwrt
