@@ -53,5 +53,5 @@ sed -i '/exit 0/i\chmod 755 /usr/bin/serverchan/serverchan' package/lean/default
 sed -i '/exit 0/i\echo 0xDEADBEEF > /etc/config/google_fu_mode\n' package/lean/default-settings/files/zzz-default-settings
 
 #修改banner
-rm -rf package/base-files/files/etc/banner
-cp -f ../banner package/base-files/files/etc/
+#rm -rf package/base-files/files/etc/banner
+#cp -f ../banner package/base-files/files/etc/
