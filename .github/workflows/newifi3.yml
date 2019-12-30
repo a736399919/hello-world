@@ -83,5 +83,5 @@ jobs:
     - name : Upload artifact1
       uses: actions/upload-artifact@master
       with:
-          name: newifi-d2
-          path: openwrt/d2
+          name: newifi-D2
+          path: openwrt/D2
