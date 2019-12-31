@@ -30,6 +30,9 @@ sed -i 's/cifsd-tools/cifsd-server/g' package/lean/luci-app-cifsd/Makefile
 rm -rf package/lean/luci-app-koolproxyR
 rm -rf package/lean/luci-app-serverchan
 rm -rf package/lean/luci-app-unblockmusic
+rm -rf package/lean/qBittorrent/Makefile
+rm -rf package/lean/qBittorrent/patches
+cp -f ../qb421 package/lean/qBittorrent/Makefile
 
 #添加自己repo的插件的软连接
 ln -s ../../luci-theme-argon1.x ./package/
@@ -52,6 +55,7 @@ sed -i '57,60d' package/lean/default-settings/files/zzz-default-settings
 sed -i '/exit 0/i\chmod 755 /etc/init.d/serverchan' package/lean/default-settings/files/zzz-default-settings
 sed -i '/exit 0/i\chmod 755 /usr/bin/serverchan/serverchan' package/lean/default-settings/files/zzz-default-settings
 sed -i '/exit 0/i\echo 0xDEADBEEF > /etc/config/google_fu_mode\n' package/lean/default-settings/files/zzz-default-settings
+sed -i '/exit 0/i\rm -rf /usr/bin/v2ray' package/lean/default-settings/files/zzz-default-settings
 
 #修改banner
 #rm -rf package/base-files/files/etc/banner
