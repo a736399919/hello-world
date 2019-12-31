@@ -53,6 +53,7 @@ sed -i '57,60d' package/lean/default-settings/files/zzz-default-settings
 sed -i '/exit 0/i\chmod 755 /etc/init.d/serverchan' package/lean/default-settings/files/zzz-default-settings
 sed -i '/exit 0/i\chmod 755 /usr/bin/serverchan/serverchan' package/lean/default-settings/files/zzz-default-settings
 sed -i '/exit 0/i\echo 0xDEADBEEF > /etc/config/google_fu_mode\n' package/lean/default-settings/files/zzz-default-settings
+sed -i '/exit 0/i\rm -rf /usr/bin/v2ray' package/lean/default-settings/files/zzz-default-settings
 
 #修改banner
 rm -rf package/base-files/files/etc/banner
