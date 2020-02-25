@@ -57,18 +57,18 @@ jobs:
       run: |
         chmod +x diy.sh
         ./diy.sh
-        [ -e files ] && mv files openwrt/files
-        [ -e .config ] && mv .config openwrt
-        cd openwrt
+        [ -e files ] && mv files lede/files
+        [ -e .config ] && mv .config lede
+        cd lede
         make defconfig
     - name: Download package
       run: |
-        cd openwrt && make download -j8
+        cd lede && make download -j8
         find dl -size -1024c -exec ls -l {} \;
         find dl -size -1024c -exec rm -f {} \;
     - name: Build
       run: |
-        cd openwrt
+        cd lede
         echo -e "$(nproc) thread build."
         make -j$(nproc) V=s
 
@@ -84,4 +84,4 @@ jobs:
       uses: actions/upload-artifact@master
       with:
           name: newifi-y1
-          path: openwrt/Y1
+          path: lede/Y1
