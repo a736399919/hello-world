@@ -74,7 +74,7 @@ jobs:
 
     - name: Assemble artifact
       run: |
-        cd openwrt
+        cd lede
         mkdir Y1
         find ./bin -name "*sysupgrade.bin"  -type f  -exec mv {}   ./Y1   \;
         find ./bin -name "*.seed"  -type f  -exec mv {}   ./Y1   \;
