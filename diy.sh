@@ -5,19 +5,6 @@
 #   Author: P3TERX
 #   Blog: https://p3terx.com
 #=================================================
-#克隆源码
-#git clone -b openwrt-19.07 https://github.com/openwrt/openwrt.git openwrt
-#git clone https://github.com/coolsnowwolf/lede lede
-#ln -s ../../lede/package/lean ./openwrt/package/
-#cd openwrt
-#cd lede
-#sed -i '/luci/d' feeds.conf.default
-#sed -i '$a src-git luci https://github.com/coolsnowwolf/luci' feeds.conf.default
-#sed -i '$a src-git extra https://github.com/Andy2244/openwrt-extra.git' feeds.conf.default
-sed -i '$a src-git lienol https://github.com/Lienol/openwrt-package' feeds.conf.default
-./scripts/feeds update -a
-#./scripts/feeds install -f -p extra -a
-./scripts/feeds install -a
 #添加自定义插件
 #git clone https://github.com/Ameykyl/luci-app-koolproxyR.git package/luci-app-koolproxyR
 #git clone https://github.com/tty228/luci-app-serverchan.git package/luci-app-serverchan
@@ -37,15 +24,16 @@ sed -i '$a src-git lienol https://github.com/Lienol/openwrt-package' feeds.conf.
 #添加自己repo的插件的软连接
 ln -s ../../luci-theme-argon1.x ./package/
 ln -s ../../luci-app-flowoffload_ADGHome ./package/
-git clone https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon-2.1
-rm -rf package/luci-theme-argon-2.1/htdocs/luci-static/argon/head-icon.jpg
-rm -rf package/luci-theme-argon-2.1/htdocs/luci-static/argon/img/
-cp -rf ../luci-theme-argon-1.x/htdocs/luci-static/argon/head-icon.jpg package/luci-theme-argon-2.1/htdocs/luci-static/argon/
-sed -i '/class="darkMask"/a \ \ \ <div class="login-bg" style="background-color: #5e72e4"></div>' package/luci-theme-argon-2.1/luasrc/view/themes/argon/header.htm
-sed -i '/background-image/d' package/luci-theme-argon-2.1/luasrc/view/themes/argon/header.htm
+#添加主题
+git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon-1.5.1
+rm -rf package/luci-theme-argon-1.5.1/htdocs/luci-static/argon/head-icon.jpg
+rm -rf package/luci-theme-argon-1.5.1/htdocs/luci-static/argon/img/
+cp -rf ../luci-theme-argon1.x/htdocs/luci-static/argon/head-icon.jpg package/luci-theme-argon-1.5.1/htdocs/luci-static/argon/
+sed -i '/class="darkMask"/a \ \ \ <div class="login-bg" style="background-color: #5e72e4"></div>' package/luci-theme-argon-1.5.1/luasrc/view/themes/argon/header.htm
+sed -i '/background-image/d' package/luci-theme-argon-1.5.1/luasrc/view/themes/argon/header.htm
 
 #修改lan口地址
-sed -i 's/192.168.1.1/192.168.10.5/g' package/base-files/files/bin/config_generate
+sed -i 's/192.168.1.1/192.168.10.1/g' package/base-files/files/bin/config_generate
 
 #修改机器名称
 sed -i 's/OpenWrt/Newifi-Y1/g' package/base-files/files/bin/config_generate
@@ -58,9 +46,9 @@ sed -i 's/OpenWrt/FK20100010/g' package/kernel/mac80211/files/lib/wifi/mac80211.
 
 #修改zzz-default-settings的配置
 #sed -i '46,48d' package/lean/default-settings/files/zzz-default-settings
-sed -i '/exit 0/i\chmod 755 /etc/init.d/serverchan' package/lean/default-settings/files/zzz-default-settings
-sed -i '/exit 0/i\chmod 755 /usr/bin/serverchan/serverchan' package/lean/default-settings/files/zzz-default-settings
-sed -i '/exit 0/i\echo 0xDEADBEEF > /etc/config/google_fu_mode\n' package/lean/default-settings/files/zzz-default-settings
+#sed -i '/exit 0/i\chmod 755 /etc/init.d/serverchan' package/lean/default-settings/files/zzz-default-settings
+#sed -i '/exit 0/i\chmod 755 /usr/bin/serverchan/serverchan' package/lean/default-settings/files/zzz-default-settings
+#sed -i '/exit 0/i\echo 0xDEADBEEF > /etc/config/google_fu_mode\n' package/lean/default-settings/files/zzz-default-settings
 
 #修改banner
 rm -rf package/base-files/files/etc/banner
