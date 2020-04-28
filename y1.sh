@@ -5,9 +5,8 @@
 #   Author: P3TERX
 #   Blog: https://p3terx.com
 #=================================================
-git clone https://github.com/openwrt/openwrt.git
+git clone -b dev-19.07 https://github.com/Lienol/openwrt
 cd openwrt
-sed -i '$a src-git lienol https://github.com/Lienol/openwrt-package' feeds.conf.default
 ./scripts/feeds clean
 ./scripts/feeds update -a
 ./scripts/feeds install -a
@@ -51,7 +50,7 @@ sed -i 's/192.168.1.1/192.168.10.1/g' package/base-files/files/bin/config_genera
 sed -i 's/OpenWrt/Newifi-Y1/g' package/base-files/files/bin/config_generate
 
 #修改wifi名称
-sed -i 's/OpenWrt/FK20100010/g' package/kernel/mac80211/files/lib/wifi/mac80211.sh
+sed -i 's/OpenWrt/201/g' package/kernel/mac80211/files/lib/wifi/mac80211.sh
 
 #修改时区
 #sed -i "s/'UTC'/'CST-8'\n        set system.@system[-1].zonename='Asia\/Shanghai'/g" package/base-files/files/bin/config_generate
@@ -65,4 +64,5 @@ sed -i 's/OpenWrt/FK20100010/g' package/kernel/mac80211/files/lib/wifi/mac80211.
 #修改banner
 rm -rf package/base-files/files/etc/banner
 cp -f ../banner package/base-files/files/etc/
+rm -rf .config
 cp -f ../y1.config .config
