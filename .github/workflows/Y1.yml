@@ -55,8 +55,8 @@ jobs:
 
     - name: Load custom configuration
       run: |
-        chmod +x diy.sh
-        ./diy.sh
+        chmod +x y1.sh
+        ./y1.sh
         [ -e files ] && mv files lede/files
         [ -e .config ] && mv .config lede
         cd lede
