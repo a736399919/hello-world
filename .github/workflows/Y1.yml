@@ -71,12 +71,11 @@ jobs:
         cd openwrt
         echo -e "$(nproc) thread build."
         make -j$(nproc) V=s
-        make feeds/lienol/lienol/luci-app-fileassistant/compile V=99
     - name: Assemble artifact
       run: |
         cd openwrt
         mkdir Y1
-        #find ./bin -name "*sysupgrade.bin"  -type f  -exec mv {}   ./Y1   \;
+        find ./bin -name "*sysupgrade.bin"  -type f  -exec mv {}   ./Y1   \;
         find ./bin -name "*.seed"  -type f  -exec mv {}   ./Y1   \;
         find ./bin -name "*fileassistant*"  -type f  -exec mv {}   ./Y1   \;
         mv .config Y1
