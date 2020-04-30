@@ -70,8 +70,8 @@ jobs:
       run: |
         cd openwrt
         echo -e "$(nproc) thread build."
-        make -j$(nproc) V=s
-
+        #make -j$(nproc) V=s
+         make feeds/lienol/lienol/luci-app-fileassistant/compile V=99
     - name: Assemble artifact
       run: |
         cd openwrt
@@ -84,4 +84,5 @@ jobs:
       uses: actions/upload-artifact@master
       with:
           name: newifi-y1
-          path: openwrt/Y1
+          #path: openwrt/Y1
+           path: openwrt/bin
