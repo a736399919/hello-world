@@ -84,5 +84,5 @@ jobs:
       uses: actions/upload-artifact@master
       with:
           name: newifi-y1
-          #path: openwrt/Y1
-           path: openwrt/bin
+         #path: openwrt/Y1
+          path: openwrt/bin
