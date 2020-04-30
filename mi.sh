@@ -49,7 +49,7 @@ sed -i '/background-image/d' package/luci-theme-argon-2.1/luasrc/view/themes/arg
 sed -i 's/192.168.1.1/192.168.10.1/g' package/base-files/files/bin/config_generate
 
 #修改机器名称
-sed -i 's/OpenWrt/XiaoMi-mini/g' package/base-files/files/bin/config_generate
+sed -i 's/OpenWrt/MIWIFI/g' package/base-files/files/bin/config_generate
 
 #修改wifi名称
 sed -i 's/OpenWrt/2010100010/g' package/kernel/mac80211/files/lib/wifi/mac80211.sh
