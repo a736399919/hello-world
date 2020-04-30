@@ -55,8 +55,8 @@ jobs:
 
     - name: Load custom configuration
       run: |
-        chmod +x y1.sh
-        ./y1.sh
+        chmod +x mi.sh
+        ./mi.sh
         [ -e files ] && mv files openwrt/files
         [ -e .config ] && mv .config openwrt
         cd openwrt
@@ -78,7 +78,7 @@ jobs:
         find ./bin -name "*sysupgrade.bin"  -type f  -exec mv {}   ./Mi   \;
         find ./bin -name "*.seed"  -type f  -exec mv {}   ./Mi   \;
         find ./bin -name "*fileassistant*"  -type f  -exec mv {}   ./Mi   \;
-        mv .config Y1
+        mv .config Mi/mi.config
 
     - name : Upload artifact1
       uses: actions/upload-artifact@master
