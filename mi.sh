@@ -67,6 +67,6 @@ sed -i 's/disabled=1/disabled=0/g' package/kernel/mac80211/files/lib/wifi/mac802
 
 #修改banner
 rm -rf package/base-files/files/etc/banner
-cp -f ../banner-xiaomi package/base-files/files/etc/
+cp -f ../banner-miwifi package/base-files/files/etc/banner
 rm -rf .config
 cp -f ../mi.config .config
