@@ -52,4 +52,4 @@ sed -i 's/OpenWrt/FK20100010/g' package/kernel/mac80211/files/lib/wifi/mac80211.
 
 #修改banner
 rm -rf package/base-files/files/etc/banner
-cp -f ../banner-y1 package/base-files/files/etc/
+cp -f ../banner-y1 package/base-files/files/etc/banner
