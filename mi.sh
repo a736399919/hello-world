@@ -6,9 +6,9 @@
 #   Blog: https://p3terx.com
 #=================================================
 git clone -b dev-19.07 https://github.com/Lienol/openwrt
+git clone https://github.com/a736399919/lienol-openwrt-package.git
+cp -rf lienol-openwrt-package/lienol/luci-app-passwall openwrt/package
 cd openwrt
-sed -i '/lienol/d' feeds.conf.default
-sed -i '$a src-git lienol https://github.com/a736399919/lienol-openwrt-package' feeds.conf.default
 ./scripts/feeds clean
 ./scripts/feeds update -a
 ./scripts/feeds install -a
@@ -52,21 +52,23 @@ sed -i 's/192.168.1.1/192.168.10.1/g' package/base-files/files/bin/config_genera
 sed -i 's/OpenWrt/MIWIFI/g' package/base-files/files/bin/config_generate
 
 #修改wifi名称
-sed -i 's/OpenWrt/2010100010/g' package/kernel/mac80211/files/lib/wifi/mac80211.sh
+sed -i 's/OpenWrt/xiaoyan/g' package/kernel/mac80211/files/lib/wifi/mac80211.sh
 #默认打开WiFi
 sed -i 's/disabled=1/disabled=0/g' package/kernel/mac80211/files/lib/wifi/mac80211.sh
 
 #修改时区
 #sed -i "s/'UTC'/'CST-8'\n        set system.@system[-1].zonename='Asia\/Shanghai'/g" package/base-files/files/bin/config_generate
 
+修改插件位置
+sed -i 's/services/nas/g' package/lean/luci-app-samba4/luasrc/controller/samba4.lua
 #修改zzz-default-settings的配置
-#sed -i '46,48d' package/lean/default-settings/files/zzz-default-settings
-#sed -i '/exit 0/i\chmod 755 /etc/init.d/serverchan' package/lean/default-settings/files/zzz-default-settings
-#sed -i '/exit 0/i\chmod 755 /usr/bin/serverchan/serverchan' package/lean/default-settings/files/zzz-default-settings
-#sed -i '/exit 0/i\echo 0xDEADBEEF > /etc/config/google_fu_mode\n' package/lean/default-settings/files/zzz-default-settings
+#添加简易网盘
+sed -i '/exit 0/i\mkdir -pv /srv/webd/web/.Trash\n' package/default-settings/files/zzz-default-settings
+sed -i '/exit 0/i\ln -sv /mnt/sda1 /srv/webd/web/U盘\n' package/default-settings/files/zzz-default-settings
+sed -i '/exit 0/i\chmod 775 /usr/bin/webd' package/default-settings/files/zzz-default-settings
 
 #修改banner
 rm -rf package/base-files/files/etc/banner
 cp -f ../banner-miwifi package/base-files/files/etc/banner
 rm -rf .config
-cp -f ../mi.config .config
+#cp -f ../mi.config .config
