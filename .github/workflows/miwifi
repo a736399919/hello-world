@@ -57,8 +57,6 @@ jobs:
       run: |
         chmod +x mi.sh
         ./mi.sh
-        [ -e files ] && mv files openwrt/files
-        [ -e .config ] && mv .config openwrt
         cd openwrt
         make defconfig
     - name: Download package
