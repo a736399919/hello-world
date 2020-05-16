@@ -59,8 +59,8 @@ sed -i 's/disabled=1/disabled=0/g' package/kernel/mac80211/files/lib/wifi/mac802
 #修改时区
 #sed -i "s/'UTC'/'CST-8'\n        set system.@system[-1].zonename='Asia\/Shanghai'/g" package/base-files/files/bin/config_generate
 
-修改插件位置
-sed -i 's/services/nas/g' package/lean/luci-app-samba4/luasrc/controller/samba4.lua
+#修改插件位置
+#sed -i 's/services/nas/g' package/lean/luci-app-samba4/luasrc/controller/samba4.lua
 #修改zzz-default-settings的配置
 #添加简易网盘
 sed -i '/exit 0/i\mkdir -pv /srv/webd/web/.Trash\n' package/default-settings/files/zzz-default-settings
