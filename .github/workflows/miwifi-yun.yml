@@ -89,6 +89,16 @@ jobs:
         echo -e "$(nproc) thread compile"
         make -j$(nproc) || make -j1 V=s
         echo "::set-output name=status::success"
+        
+    - name: Assemble artifact
+      run: |
+        cd openwrt
+        mkdir MiWiFi
+        find ./bin -name "*sysupgrade.bin"  -type f  -exec mv {}   ./MiWiFi   \;
+        find ./bin -name "*.seed"  -type f  -exec mv {}   ./MiWiFi   \;
+        find ./bin -name "*.buildinfo"  -type f  -exec mv {}   ./MiWiFi   \;
+        find ./bin -name "*fileassistant*"  -type f  -exec mv {}   ./MiWiFi   \;
+        mv .config MiWiFi              
 
     - name: Upload bin directory
       uses: actions/upload-artifact@master
