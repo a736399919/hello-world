@@ -71,4 +71,4 @@ sed -i '/exit 0/i\chmod 775 /usr/bin/webd' package/default-settings/files/zzz-de
 rm -rf package/base-files/files/etc/banner
 cp -f ../banner-miwifi package/base-files/files/etc/banner
 [ -e ../files ] && mv ../files files
-[ -e ../mi.config ] && mv ../mi.config ./.config
+[ -e ../mi.config ] && cp -f ../mi.config .config
