@@ -78,7 +78,7 @@ jobs:
         find ./bin -name "*fileassistant*"  -type f  -exec mv {}   ./Mi   \;
         mv .config Mi/mi.config
 
-    - name : Upload artifact1
+    - name : Upload artifact
       uses: actions/upload-artifact@master
       with:
           name: XiaoMi-mini
