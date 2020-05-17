@@ -27,7 +27,7 @@ env:
 #  CONFIG_FILE: .config
   DIY_SH: mi.sh
   SSH_ACTIONS: false
-  UPLOAD_BIN_DIR: false
+  UPLOAD_BIN_DIR: true
   UPLOAD_FIRMWARE: false
   UPLOAD_COWTRANSFER: true
   TZ: Asia/Shanghai
@@ -110,11 +110,27 @@ jobs:
       uses: actions/upload-artifact@master
       if: steps.organize.outputs.status == 'success' && !cancelled()
       with:
-        name: MiWiFi
+        name: OpenWrt_firmware
         path: ${{ env.FIRMWARE }}
 
     - name: Upload firmware to cowtransfer
       if: env.UPLOAD_COWTRANSFER == 'true' && !cancelled()
       run: |
         curl -sL https://git.io/cowtransfer | sh
-        ./cowtransfer-uploader -s -p 8 ${FIRMWARE}       
+        ./cowtransfer-uploader -s -p 8 ${FIRMWARE}    
+        
+    - name: Assemble artifact
+      run: |
+        cd openwrt
+        mkdir MiWiFi
+        find ./bin -name "*sysupgrade.bin"  -type f  -exec mv {}   ./MiWiFi   \;
+        find ./bin -name "*.seed"  -type f  -exec mv {}   ./MiWiFi   \;
+        find ./bin -name "*.buildinfo"  -type f  -exec mv {}   ./MiWiFi   \;
+        mv .config MiWiFi              
+
+    - name: Upload sysupgrade.bin
+      uses: actions/upload-artifact@master
+      if: steps.compile.outputs.status == 'success' && env.UPLOAD_BIN_DIR == 'true'
+      with:
+        name: MiWiFi
+        path: openwrt/MiWiFi                
