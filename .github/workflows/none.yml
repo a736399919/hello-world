@@ -6,7 +6,7 @@
 # Blog: https://p3terx.com
 #=================================================
 
-name: MT7620
+name: MT7620-y1
 
 on:
   repository_dispatch:
