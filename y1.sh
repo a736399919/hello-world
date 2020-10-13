@@ -74,4 +74,4 @@ sed -i 's/disabled=1/disabled=0/g' package/kernel/mac80211/files/lib/wifi/mac802
 rm -rf package/base-files/files/etc/banner
 cp -f ../banner-y1 package/base-files/files/etc/banner
 #[ -e ../files ] && mv ../files files
-[ -e ../y1.config ] && mv ../y1.config .config
+[ -e ../lean-y1.config ] && mv ../lean-y1.config .config
