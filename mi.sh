@@ -32,12 +32,12 @@ sed -i '$a src-git lienol https://github.com/Lienol/openwrt-package' feeds.conf.
 ln -s ../../luci-theme-argon1.x ./package/
 ln -s ../../luci-app-flowoffload_ADGHome ./package/
 #添加主题
-git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon-1.5.1
-rm -rf package/luci-theme-argon-1.5.1/htdocs/luci-static/argon/head-icon.jpg
-rm -rf package/luci-theme-argon-1.5.1/htdocs/luci-static/argon/img/
-cp -rf ../luci-theme-argon1.x/htdocs/luci-static/argon/head-icon.jpg package/luci-theme-argon-1.5.1/htdocs/luci-static/argon/
-sed -i '/class="darkMask"/a \ \ \ <div class="login-bg" style="background-color: #5e72e4"></div>' package/luci-theme-argon-1.5.1/luasrc/view/themes/argon/header.htm
-sed -i '/background-image/d' package/luci-theme-argon-1.5.1/luasrc/view/themes/argon/header.htm
+git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon-1.7.0
+#rm -rf package/luci-theme-argon-1.5.1/htdocs/luci-static/argon/head-icon.jpg
+#rm -rf package/luci-theme-argon-1.5.1/htdocs/luci-static/argon/img/
+#cp -rf ../luci-theme-argon1.x/htdocs/luci-static/argon/head-icon.jpg package/luci-theme-argon-1.5.1/htdocs/luci-static/argon/
+#sed -i '/class="darkMask"/a \ \ \ <div class="login-bg" style="background-color: #5e72e4"></div>' package/luci-theme-argon-1.5.1/luasrc/view/themes/argon/header.htm
+#sed -i '/background-image/d' package/luci-theme-argon-1.5.1/luasrc/view/themes/argon/header.htm
 
 git clone https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon-2.1
 rm -rf package/luci-theme-argon-2.1/htdocs/luci-static/argon/head-icon.jpg
@@ -70,5 +70,6 @@ sed -i '/exit 0/i\chmod 775 /usr/bin/webd' package/lean/default-settings/files/z
 #修改banner
 rm -rf package/base-files/files/etc/banner
 cp -f ../banner-miwifi package/base-files/files/etc/banner
-[ -e ../files ] && mv ../files files
+#[ -e ../files ] && mv ../files files
 [ -e ../mi-default.config ] && mv ../mi-default.config .config
+cp -rf ../lean-mi.config .config
