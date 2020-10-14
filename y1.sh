@@ -6,10 +6,10 @@
 #   Blog: https://p3terx.com
 #=================================================
 #git clone https://github.com/coolsnowwolf/lede openwrt
-git clone https://github.com/openwrt/openwrt
+git clone https://github.com/Lienol/openwrt.git
 cd openwrt
 #添加Lienol的插件包
-sed -i '$a src-git lienol https://github.com/Lienol/openwrt-package' feeds.conf.default
+#sed -i '$a src-git lienol https://github.com/Lienol/openwrt-package' feeds.conf.default
 ./scripts/feeds update -a
 ./scripts/feeds install -a
 #添加自定义插件
@@ -29,8 +29,8 @@ sed -i '$a src-git lienol https://github.com/Lienol/openwrt-package' feeds.conf.
 #cp -f ../qb421 package/lean/qBittorrent/Makefile
 
 #添加自己repo的插件的软连接
-ln -s ../../luci-theme-argon1.x ./package/
-ln -s ../../luci-app-flowoffload_ADGHome ./package/
+#ln -s ../../luci-theme-argon1.x ./package/
+#ln -s ../../luci-app-flowoffload_ADGHome ./package/
 #添加主题
 git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon-1.7.0
 #rm -rf package/luci-theme-argon-1.7.0/htdocs/luci-static/argon/head-icon.jpg
