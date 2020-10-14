@@ -5,7 +5,7 @@
 #   Blog: https://p3terx.com
 #=================================================
 
-name: XiaoMi mini
+name: MiWiFi-Lienol
 
 on: 
   release:
