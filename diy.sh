@@ -7,9 +7,18 @@
 #=================================================
 #克隆源码
 git clone https://github.com/openwrt/openwrt.git openwrt
+git clone https://github.com/coolsnowwolf/lede.git lede
+cp -rf lede/package/lean/luci-app-vlmcsd openwrt/package/lean/luci-app-vlmcsd
+cp -rf lede/package/lean/vlmcsd openwrt/package/lean/vlmcsd
 cd openwrt
+#添加Lienol的插件包
+sed -i '$a src-git lienol https://github.com/Lienol/openwrt-package' feeds.conf.default
 ./scripts/feeds update -a
 ./scripts/feeds install -a
+
+#添加主题
+git clone https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon-2.2.5
+
 
 #修改lan口地址
 sed -i 's/192.168.1.1/192.168.10.1/g' package/base-files/files/bin/config_generate
