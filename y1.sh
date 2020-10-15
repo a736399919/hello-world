@@ -7,6 +7,9 @@
 #=================================================
 #git clone https://github.com/coolsnowwolf/lede openwrt
 git clone https://github.com/Lienol/openwrt.git
+git clone https://github.com/coolsnowwolf/lede.git lede
+cp -rf lede/package/lean/luci-app-vlmcsd openwrt/package/lean/luci-app-vlmcsd
+cp -rf lede/package/lean/vlmcsd openwrt/package/lean/vlmcsd
 cd openwrt
 #添加Lienol的插件包
 #sed -i '$a src-git lienol https://github.com/Lienol/openwrt-package' feeds.conf.default
