@@ -44,3 +44,10 @@ sed -i 's/OpenWrt/MiWiFi/g' package/kernel/mac80211/files/lib/wifi/mac80211.sh
 rm -rf package/base-files/files/etc/banner
 cp -f ../banner-miwifi package/base-files/files/etc/banner
 cp -f ../openwrt-miwifi.config .config
+
+#把文件b的内容插到a的指定词(exit 0)的行前面
+#sed -e '/exit 0/{h;s/.*/cat b.txt/e;G}' a
+#sed  -e '/exit 0/r b' -e 'x;$G' a
+#把文件b的内容插到a的指定词(exit 0)的行后面
+#sed -e '/exit 0/{p;s/.*/cat b.txt/e;}' a
+#sed 'exit 0/r b' a
