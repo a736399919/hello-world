@@ -63,7 +63,7 @@ sed -i 's/disabled=1/disabled=0/g' package/kernel/mac80211/files/lib/wifi/mac802
 #sed -i 's/services/nas/g' package/lean/luci-app-samba4/luasrc/controller/samba4.lua
 #修改zzz-default-settings的配置
 #添加usbwan
-sed -e '/exit 0/{h;s/.*/cat ../config/add-usbwan/e;G}' package/default-settings/files/zzz-default-settings
+sed -i -e '/exit 0/{h;s/.*/cat ../config/add-usbwan/e;G}' package/default-settings/files/zzz-default-settings
 
 #添加简易网盘
 #sed -i '/exit 0/i\mkdir -pv /srv/webd/web/.Trash\n' package/default-settings/files/zzz-default-settings
