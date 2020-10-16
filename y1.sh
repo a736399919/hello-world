@@ -13,9 +13,6 @@ cd openwrt
 ./scripts/feeds update -a
 ./scripts/feeds install -a
 #添加自定义插件
-git clone https://github.com/awesome-openwrt/luci-app-autoreboot.git package/luci-app-autoreboot
-git clone https://github.com/xsmzhzy/luci-app-vlmcsd.git package/luci-app-vlmcsd
-git clone https://github.com/smzhzy/openwrt_vlmcsd.git package/openwrt_vlmcsd
 #git clone https://github.com/Ameykyl/luci-app-koolproxyR.git package/luci-app-koolproxyR
 #git clone https://github.com/tty228/luci-app-serverchan.git package/luci-app-serverchan
 #git clone https://github.com/maxlicheng/luci-app-unblockmusic.git package/luci-app-unblockmusic
