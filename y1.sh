@@ -13,6 +13,7 @@ cd openwrt
 ./scripts/feeds clean
 ./scripts/feeds update -a
 ./scripts/feeds install -a
+git clone https://github.com/xiaorouji/openwrt-passwall.git package/openwrt-passwall
 #添加自定义插件
 #git clone https://github.com/Ameykyl/luci-app-koolproxyR.git package/luci-app-koolproxyR
 #git clone https://github.com/tty228/luci-app-serverchan.git package/luci-app-serverchan
