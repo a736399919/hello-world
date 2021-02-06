@@ -10,6 +10,7 @@ git clone https://github.com/Lienol/openwrt.git
 cd openwrt
 #添加Lienol的插件包
 #sed -i '$a src-git lienol https://github.com/Lienol/openwrt-package' feeds.conf.default
+./scripts/feeds clean
 ./scripts/feeds update -a
 ./scripts/feeds install -a
 #添加自定义插件
