@@ -36,23 +36,22 @@
             "hot": "./p[1]"
         }
     },
-    {
-        "id": "btsow",
-        "name": " BTSOW ",
-        "url": "https://btsow.digital",
-        "icon": "https://btsow.digital/favicon.ico",
-        "paths": {
-            "preset": "/search/{k}",
-            "size": "//btsow.digital/magnet/detail/hash/{p}A1DC1A0C0115410E93E094414AADC66DB502474"
-        },
-        "xpath": {
-            "group": "//div[@class='row']",
-            "magnet": "./a[1]/@href",
-            "name": "./a[1]",
-            "size": "./div[1]",
-            "date": "./div[2]"
-        }
-    },
+   {
+  "id": "btsow",
+  "name": " BTSOW ",
+  "url": "https://btsow.one",
+  "icon": "https://btsow.one/favicon.ico",
+  "paths": {
+    "preset": "/search/{k}"
+  },
+  "xpath": {
+    "group": "//div[@class='row']",
+    "magnet": "./a[1]/@href",
+    "name": "./a[1]",
+    "size": "./div[1]",
+    "date": "./div[2]"
+  }
+},
 	{
 	  "id": "sobt2",
 	  "name": " Sobt",
