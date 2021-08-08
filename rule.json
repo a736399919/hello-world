@@ -1,13 +1,13 @@
 [
 	{
-          "id": "wx880",
-          "name": "最全磁力",
-          "url": "http://wx880.site",
-          "icon": "http://wx880.site/favicon.ico",
-          "paths": {
-            "preset": "/search?word={k}",
-            "size": "/search?word={k}&sort=length",
-            "time": "/search?word={k}&sort=time"
+      "id": "wx880",
+      "name": "最全磁力",
+      "url": "http://wx880.site",
+      "icon": "http://wx880.site/favicon.ico",
+      "paths": {
+        "preset": "/search?word={k}",
+        "size": "/search?word={k}&sort=length",
+        "time": "/search?word={k}&sort=time"
       },
       "xpath": {
         "group": "//li[@class='list-group-item']",
@@ -18,6 +18,24 @@
       }
     },
 	{
+      "id": "btmet15",
+      "name": "BTMET",
+      "url": "https://www.btmet15.xyz",
+      "icon": "https://www.btmet15.xyz/favicon.ico",
+      "paths": {
+        "preset": "/search.php?q={k}",
+        "size": "/search.php?q={k}&c=&l=&o={p}"
+      },
+      "xpath": {
+        "group": "//div[@class='f_left']",
+        "magnet": "./div[1]/h3[1]/a[1]/@href",
+        "name": "./div[1]/h3[1]/a[1]",
+        "size": "./div[3]/span[3]/b[1]/font[1]",
+        "date": "./div[3]/span[6]/b[1]",
+        "hot": "./div[3]/span[5]/b[1]"
+      }
+    },
+    {
 	  "id": "btmulu5",
 	  "name": "BT目录",
 	  "url": "https://btmulu5.xyz",
