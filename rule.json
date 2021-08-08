@@ -559,7 +559,8 @@
 		"date": "./p[1]",
 		"hot": "./p[1]"
 	  }
-	},{
+	},
+	{
 	  "id": "eclmy",
 	  "name": "磁力蚂蚁",
 	  "url": "http://www.eclmy.space",
@@ -772,5 +773,5 @@
 		"date": "./dd[10]/span[3]/b[1]",
 		"hot": "./div[11]/ul[1]/a[10]"
 	  }
-}
+},
 ]
