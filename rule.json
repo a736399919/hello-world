@@ -1,13 +1,13 @@
 [
 	{
-      "id": "wx880",
-      "name": "最全磁力",
-      "url": "http://wx880.site",
-      "icon": "http://wx880.site/favicon.ico",
-      "paths": {
-        "preset": "/search?word={k}",
-        "size": "/search?word={k}&sort=length",
-        "time": "/search?word={k}&sort=time"
+          "id": "wx880",
+          "name": "最全磁力",
+          "url": "http://wx880.site",
+          "icon": "http://wx880.site/favicon.ico",
+          "paths": {
+            "preset": "/search?word={k}",
+            "size": "/search?word={k}&sort=length",
+            "time": "/search?word={k}&sort=time"
       },
       "xpath": {
         "group": "//li[@class='list-group-item']",
@@ -35,5 +35,5 @@
 		"date": "./p[1]",
 		"hot": "./p[1]"
 	  }
-	},	
+	}
 ]
