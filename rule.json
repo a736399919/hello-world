@@ -35,25 +35,6 @@
       }
     },
 	{
-      "id": "clm109",
-      "name": "磁力猫 ",
-      "url": "https://clm109.xyz",
-      "icon": "https://clm109.xyz/favicon.ico",
-      "paths": {
-        "preset": "/search-{k}-{p}-0-1.html",
-        "size": "/search-{k}-{p}-1-1.html",
-        "time": "/search-{k}-{p}-2-1.html"
-      },
-      "xpath": {
-        "group": "//div[@class='ssbox']",
-        "magnet": "./div[3]/span[1]/a[1]/@href",
-        "name": "./div[1]/h3[1]/a[1]",
-        "size": "./div[3]/span[3]/b[1]",
-        "date": "./div[3]/span[4]/b[1]",
-        "hot": "./div[3]/span[5]/b[1]"
-      }
-    },
-	{
       "id": "ciligou",
       "name": "磁力狗 ",
       "url": "https://ciligou.ga",
@@ -222,5 +203,148 @@
         "date": "./div[3]/span[4]/b[1]",
         "hot": "./div[3]/span[5]/b[1]"
       }
-    }
-]
+    },
+    {
+        "id": "sokankan94",
+        "name": " 吃力网",
+        "url": "https://www.sokankan94.xyz",
+        "icon": "https://www.sokankan94.xyz/favicon.ico",
+        "paths": {
+            "preset": "/search.html?name={k}",
+            "hot": "/search-hot/{k}.html",
+            "size": "/search-size/{k}.html"
+        },
+        "xpath": {
+            "group": "//article[@class='item']/div",
+            "magnet": "./a[1]/@href",
+            "name": "./a[1]",
+            "size": "./p[2]",
+            "date": "./p[1]",
+            "hot": "./p[1]"
+        }
+    },
+    {
+        "id": "btgg",
+        "name": "BTGG",
+        "proxy": false,
+        "url": "https://www.btgg.cc",
+        "paths": {
+            "preset": "/search?q={k}&p={p}"
+        },
+        "xpath": {
+            "group": "//div[@class=\"item\"]",
+            "magnet": "./div[2]/a/@href",
+            "name": "./div[1]/a",
+            "size": "./div[2]/span[1]",
+            "hot": "./div[2]/span[2]",
+            "date": "./div[2]/span[3]"
+        }
+    },
+ 	{
+      "id": "bt105",
+      "name": "BT105",
+      "url": "https://bt105.xyz",
+      "icon": "https://bt105.xyz/favicon.ico",
+      "paths": {
+        "preset": "/search?keyword={p}df44e0d5f9772387238"
+      },
+      "xpath": {
+        "group": "//div[@class='el-card is-hover-shadow box-card']",
+        "magnet": "./div[1]/a[1]/@href",
+        "name": "./div[1]/a[1]",
+        "size": "./div[2]/div[1]",
+        "date": "./div[2]/div[1]"
+      }
+    },
+	{
+	  "id": "zhongziso23",
+	  "name": "种子搜",
+	  "url": "https://zhongziso23.xyz",
+	  "icon": "https://zhongziso23.xyz/favicon.ico",
+	  "paths": {
+		"preset": "/list/{k}/{p}",
+		"size": "/list_length/{k}/{p}"
+	  },
+	  "xpath": {
+		"group": "//div[@class='panel panel-primary']",
+		"magnet": "./div[2]/table[15]/tbody[1]/tr[2]/td[4]/a[1]/@href",
+		"name": "./div[2]/table[3]/tbody[1]/tr[2]/td[4]/a[1]",
+		"size": "./div[2]/table[15]/tbody[1]/tr[2]/td[2]/strong[1]",
+		"date": "./div[2]/table[15]/tbody[1]/tr[2]/td[1]/strong[1]",
+		"hot": "./div[2]/table[15]/tbody[1]/tr[2]/td[3]/strong[1]"
+	  }
+	},
+	{
+	  "id": "sobt2",
+	  "name": " Sobt",
+	  "url": "http://sobt2.co",
+	  "icon": "http://sobt2.co/favicon.ico",
+	  "paths": {
+		"preset": "/q/{k}.html",
+		"time": "/q/{k}.html?sort=time",
+		"size": "/q/{k}.html?sort=size"
+	  },
+	  "xpath": {
+		"group": "//div[@class='search-item']",
+		"magnet": "./div[1]/h3[1]/a[1]/@href",
+		"name": "./div[1]/h3[1]/a[1]",
+		"size": "./div[3]/span[3]/b[1]",
+		"date": "./div[3]/span[2]/b[1]",
+		"hot": "./div[3]/span[4]/b[1]"
+	  }
+	},
+	{
+	  "id": "btmovi",
+	  "name": "磁力蜘蛛",
+	  "url": "http://www.btmovi.cloud",
+	  "icon": "http://www.btmovi.cloud/favicon.ico",
+	  "paths": {
+		"preset": "/so/{k}.html",
+		"time": "/so/{k}_time_{p}.html",
+		"size": "/so/{k}_size_{p}.html"
+	  },
+	  "xpath": {
+		"group": "//div[@class='search-item']",
+		"magnet": "./div[1]/h3[1]/a[1]/@href",
+		"name": "./div[1]/h3[1]/a[1]",
+		"size": "./div[3]/span[3]/b[1]",
+		"date": "./div[3]/span[2]/b[1]",
+		"hot": "./div[3]/span[4]/b[1]"
+	  }
+	},
+	{
+	  "id": "seed0",
+	  "name": "种子吧",
+	  "url": "http://seed0.biz",
+	  "icon": "http://seed0.biz/favicon.ico",
+	  "paths": {
+		"preset": "/search?wd={k}",
+		"time": "/search?wd={k}&sort=time",
+		"size": "/search?wd={k}&sort=size"
+	  },
+	  "xpath": {
+		"group": "//div[@class='media-body']",
+		"magnet": "./h4[1]/a[1]/@href",
+		"name": "./h4[1]/a[1]",
+		"size": "./div[2]/span[2]",
+		"date": "./div[2]/span[1]",
+		"hot": "./div[2]/span[3]"
+	  }
+	},
+    {
+     "id": "btsow",
+     "name": " BTSOW ",
+     "url": "https://btsow.one",
+     "icon": "https://btsow.one/favicon.ico",
+     "paths": {
+       "preset": "/search/{k}"
+     },
+     "xpath": {
+       "group": "//div[@class='row']",
+       "magnet": "./a[1]/@href",
+       "name": "./a[1]",
+       "size": "./div[1]",
+       "date": "./div[2]"
+     }
+    }	
+]	
