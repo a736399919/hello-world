@@ -257,24 +257,6 @@
       }
     },
 	{
-	  "id": "zhongziso23",
-	  "name": "种子搜",
-	  "url": "https://zhongziso51.xyz",
-	  "icon": "https://zhongziso51.xyz/favicon.ico",
-	  "paths": {
-		"preset": "/list/{k}/{p}",
-		"size": "/list_length/{k}/{p}"
-	  },
-	  "xpath": {
-		"group": "//div[@class='panel panel-primary']",
-		"magnet": "./div[2]/table[15]/tbody[1]/tr[2]/td[4]/a[1]/@href",
-		"name": "./div[2]/table[3]/tbody[1]/tr[2]/td[4]/a[1]",
-		"size": "./div[2]/table[15]/tbody[1]/tr[2]/td[2]/strong[1]",
-		"date": "./div[2]/table[15]/tbody[1]/tr[2]/td[1]/strong[1]",
-		"hot": "./div[2]/table[15]/tbody[1]/tr[2]/td[3]/strong[1]"
-	  }
-	},
-	{
 	  "id": "sobt2",
 	  "name": " Sobt",
 	  "url": "http://sobt2.co",
