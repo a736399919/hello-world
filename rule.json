@@ -259,8 +259,8 @@
 	{
 	  "id": "zhongziso23",
 	  "name": "种子搜",
-	  "url": "https://zhongziso23.xyz",
-	  "icon": "https://zhongziso23.xyz/favicon.ico",
+	  "url": "https://zhongziso51.xyz",
+	  "icon": "https://zhongziso51.xyz/favicon.ico",
 	  "paths": {
 		"preset": "/list/{k}/{p}",
 		"size": "/list_length/{k}/{p}"
