@@ -1,132 +1,372 @@
 [
-   {
-	  "id": "clg6",
-	  "name": " 磁力狗",
-	  "url": "http://clg6.org",
-	  "icon": "http://clg6.org/favicon.ico",
+	{
+      "id": "wx880",
+      "name": "最全磁力",
+      "url": "http://wx880.site",
+      "icon": "http://wx880.site/favicon.ico",
+      "paths": {
+        "preset": "/search?word={k}",
+        "size": "/search?word={k}&sort=length",
+        "time": "/search?word={k}&sort=time"
+      },
+      "xpath": {
+        "group": "//li[@class='list-group-item']",
+        "magnet": "./div[1]/a[1]/@href",
+        "name": "./div[1]/a[1]",
+        "size": "./div[2]",
+        "date": "./div[2]"
+      }
+    },
+	{
+      "id": "cilitiantang2035",
+      "name": "磁力天堂",
+      "url": "https://www.cilitiantang2035.xyz",
+      "icon": "https://www.cilitiantang2035.xyz/favicon.ico",
+      "paths": {
+        "preset": "/search/{k}_ctime_{p}.html",
+        "size": "/search/{k}_length_{p}.html"
+      },
+      "xpath": {
+        "group": "//div[@class='panel-body']",
+        "magnet": "./h5[1]/a[1]/@href",
+        "name": "./h5[1]/a[1]",
+        "size": "./table[1]/tbody[1]/tr[1]/td[2]/span[1]/b[1]",
+        "date": "./table[1]/tbody[1]/tr[1]/td[1]/span[1]/b[1]"
+      }
+    },
+	{
+      "id": "clm109",
+      "name": "磁力猫 ",
+      "url": "https://clm109.xyz",
+      "icon": "https://clm109.xyz/favicon.ico",
+      "paths": {
+        "preset": "/search-{k}-{p}-0-1.html",
+        "size": "/search-{k}-{p}-1-1.html",
+        "time": "/search-{k}-{p}-2-1.html"
+      },
+      "xpath": {
+        "group": "//div[@class='ssbox']",
+        "magnet": "./div[3]/span[1]/a[1]/@href",
+        "name": "./div[1]/h3[1]/a[1]",
+        "size": "./div[3]/span[3]/b[1]",
+        "date": "./div[3]/span[4]/b[1]",
+        "hot": "./div[3]/span[5]/b[1]"
+      }
+    },
+	{
+      "id": "ciligou",
+      "name": "磁力狗 ",
+      "url": "https://ciligou.ga",
+      "icon": "https://ciligou.ga/favicon.ico",
+      "paths": {
+        "preset": "/search-{k}-{p}-0-1.html",
+        "size": "/search-{k}-{p}-1-1.html",
+        "time": "/search-{k}-{p}-2-1.html"
+      },
+      "xpath": {
+        "group": "//div[@class='ssbox']",
+        "magnet": "./div[3]/span[1]/a[1]/@href",
+        "name": "./div[1]/h3[1]/a[1]",
+        "size": "./div[3]/span[3]/b[1]",
+        "date": "./div[3]/span[4]/b[1]",
+        "hot": "./div[3]/span[5]/b[1]"
+      }
+    },
+	{
+      "id": "102444",
+      "name": " 1024BT ",
+      "url": "https://102444.ga",
+      "icon": "https://102444.ga/favicon.ico",
+      "paths": {
+        "preset": "/main-search-kw-{k}-{p}.html",
+        "size": "/main-search-kw-{k}-length-{p}.html",
+        "time": "/main-search-kw-{k}-time-{p}.html"
+      },
+      "xpath": {
+        "group": "//div[@class='search-item detail-width']",
+        "magnet": "./div[3]/span[5]/a[1]/@href",
+        "name": "./div[1]/h3[1]/a[1]",
+        "size": "./div[2]/ul[1]/li[10]/span[1]",
+        "date": "./div[3]/span[2]/b[1]",
+        "hot": "./div[3]/span[4]/b[1]"
+      }
+    },
+	{
+      "id": "clsooo",
+      "name": "磁力搜 ",
+      "url": "https://clsooo.cf",
+      "icon": "https://clsooo.cf/favicon.ico",
+      "paths": {
+        "preset": "/search-{k}-{p}-0-1.html",
+        "size": "/search-{k}-{p}-1-1.html",
+        "time": "/search-{k}-{p}-2-1.html"
+      },
+      "xpath": {
+        "group": "//div[@class='ssbox']",
+        "magnet": "./div[3]/span[1]/a[1]/@href",
+        "name": "./div[1]/h3[1]/a[1]",
+        "size": "./div[3]/span[3]/b[1]",
+        "date": "./div[3]/span[4]/b[1]",
+        "hot": "./div[3]/span[5]/b[1]"
+      }
+    },
+	{
+      "id": "im1115",
+      "name": "磁力帝 ",
+      "url": "https://bt.im1115.com",
+      "icon": "https://bt.im1115.com/favicon.ico",
+      "paths": {
+        "preset": "/search-{k}-{p}-0-1.html",
+        "size": "/search-{k}-{p}-1-1.html",
+        "time": "/search-{k}-{p}-2-1.html"
+      },
+      "xpath": {
+        "group": "//div[@class='ssbox']",
+        "magnet": "./div[3]/span[1]/a[1]/@href",
+        "name": "./div[1]/h3[1]/a[1]",
+        "size": "./div[3]/span[3]/b[1]",
+        "date": "./div[3]/span[4]/b[1]",
+        "hot": "./div[3]/span[5]/b[1]"
+      }
+    },
+	{
+      "id": "clmmm",
+      "name": " 磁力妹妹 ",
+      "url": "https://clmmm.tk",
+      "icon": "https://clmmm.tk/favicon.ico",
+      "paths": {
+        "preset": "/search-{k}-{p}-0-1.html",
+        "size": "/search-{k}-{p}-1-1.html",
+        "time": "/search-{k}-{p}-2-1.html"
+      },
+      "xpath": {
+        "group": "//dl[@class='detail']",
+        "magnet": "./dd[1]/span[6]/a[1]/@href",
+        "name": "./dt[1]/a[1]",
+        "size": "./ul[1]/li[1]/span[2]",
+        "date": "./dd[1]/span[4]/b[1]",
+        "hot": "./dd[1]/span[5]/b[1]"
+      }
+    },
+	{
+      "id": "clcl107",
+      "name": "52BT ",
+      "url": "https://cl.clcl107.com",
+      "icon": "https://cl.clcl107.com/favicon.ico",
+      "paths": {
+        "preset": "/search-{k}-{p}-0-1.html",
+        "size": "/search-{k}-{p}-1-1.html",
+        "time": "/search-{k}-{p}-2-1.html"
+      },
+      "xpath": {
+        "group": "//div[@class='ssbox']",
+        "magnet": "./div[3]/span[1]/a[1]/@href",
+        "name": "./div[1]/h3[1]/a[1]",
+        "size": "./div[3]/span[3]/b[1]",
+        "date": "./div[3]/span[4]/b[1]",
+        "hot": "./div[3]/span[5]/b[1]"
+      }
+    },
+	{
+      "id": "sbt7070",
+      "name": " sbt7070",
+      "url": "http://sbt7070.pw",
+      "icon": "http://sbt7070.pw/favicon.ico",
+      "paths": {
+        "preset": "/search?word={k}",
+        "size": "/search?word={k}&sort=length",
+        "time": "/search?word={k}&sort=time"
+      },
+      "xpath": {
+        "group": "//li[@class='list-group-item']",
+        "magnet": "./div[1]/a[1]/@href",
+        "name": "./div[1]/a[1]",
+        "size": "./div[2]",
+        "date": "./div[2]"
+      }
+    },
+  	{
+      "id": "cll2",
+      "name": " 磁力链 ",
+      "url": "https://www.cll2.top",
+      "icon": "https://www.cll2.top/favicon.ico",
+      "paths": {
+        "preset": "/main-search-kw-{k}-{p}.html",
+        "size": "/main-search-kw-{k}-length-{p}.html",
+        "time": "/main-search-kw-{k}-time-{p}.html"
+      },
+      "xpath": {
+        "group": "//div[@class='search-item detail-width']",
+        "magnet": "./div[3]/span[5]/a[1]/@href",
+        "name": "./div[3]/span[5]/a[1]",
+        "size": "./div[2]/ul[1]/li[1]/span[2]",
+        "date": "./div[3]/span[2]/b[1]",
+        "hot": "./div[3]/span[4]/b[1]"
+      }
+    },
+	{
+      "id": "yhgyhg1",
+      "name": "移花宫 ",
+      "url": "https://yhgyhg1.top",
+      "icon": "https://yhgyhg1.top/favicon.ico",
+      "paths": {
+        "preset": "/search-{k}-{p}-0-1.html",
+        "size": "/search-{k}-{p}-1-1.html",
+        "time": "/search-{k}-{p}-2-1.html"
+      },
+      "xpath": {
+        "group": "//div[@class='ssbox']",
+        "magnet": "./div[3]/span[1]/a[1]/@href",
+        "name": "./div[1]/h3[1]/a[1]",
+        "size": "./div[3]/span[3]/b[1]",
+        "date": "./div[3]/span[4]/b[1]",
+        "hot": "./div[3]/span[5]/b[1]"
+      }
+    },
+ 	{
+      "id": "bt105",
+      "name": "BT105,
+      "url": "https://bt105.xyz",
+      "icon": "https://bt105.xyz/favicon.ico",
+      "paths": {
+        "preset": "/search?keyword={p}df44e0d5f9772387238"
+      },
+      "xpath": {
+        "group": "//div[@class='el-card is-hover-shadow box-card']",
+        "magnet": "./div[1]/a[1]/@href",
+        "name": "./div[1]/a[1]",
+        "size": "./div[2]/div[1]",
+        "date": "./div[2]/div[1]"
+      }
+    },
+	{
+	  "id": "zhongziso23",
+	  "name": "种子搜",
+	  "url": "https://zhongziso23.xyz",
+	  "icon": "https://zhongziso23.xyz/favicon.ico",
 	  "paths": {
-		"preset": "/search?word={k}",
-		"time": "/search?word={k}&sort=time",
-		"size": "/search?word={k}&sort=length"
+		"preset": "/list/{k}/{p}",
+		"size": "/list_length/{k}/{p}"
 	  },
 	  "xpath": {
-		"group": "//body/div[1]/div[2]/div[2]/ul[1]/li[3]",
-		"magnet": "./div[1]/div[1]/a[1]/@href",
-		"name": "./div[1]/div[1]/a[1]",
-		"size": "./div[2]",
-		"date": "./div[2]",
-		"hot": "./div[2]/span[1]"
+		"group": "//div[@class='panel panel-primary']",
+		"magnet": "./div[2]/table[15]/tbody[1]/tr[2]/td[4]/a[1]/@href",
+		"name": "./div[2]/table[3]/tbody[1]/tr[2]/td[4]/a[1]",
+		"size": "./div[2]/table[15]/tbody[1]/tr[2]/td[2]/strong[1]",
+		"date": "./div[2]/table[15]/tbody[1]/tr[2]/td[1]/strong[1]",
+		"hot": "./div[2]/table[15]/tbody[1]/tr[2]/td[3]/strong[1]"
 	  }
 	},
+    {
+        "id": "sokankan94",
+        "name": " 吃力网",
+        "url": "https://www.sokankan94.xyz",
+        "icon": "https://www.sokankan94.xyz/favicon.ico",
+        "paths": {
+            "preset": "/search.html?name={k}",
+            "hot": "/search-hot/{k}.html",
+            "size": "/search-size/{k}.html"
+        },
+        "xpath": {
+            "group": "//article[@class='item']/div",
+            "magnet": "./a[1]/@href",
+            "name": "./a[1]",
+            "size": "./p[2]",
+            "date": "./p[1]",
+            "hot": "./p[1]"
+        }
+    },
 	{
-	  "id": "btmet8",
-	  "name": "BTMET",
-	  "url": "https://btmet8.xyz",
-	  "icon": "https://btmet8.xyz/favicon.ico",
+	  "id": "sobt2",
+	  "name": " Sobt",
+	  "url": "http://sobt2.co",
+	  "icon": "http://sobt2.co/favicon.ico",
 	  "paths": {
-		"preset": "/search.php?q={k}",
-		"time": "/search.php?q={k}&c=&l=&o={p}",
-		"size": "/search.php?q={k}&c=&l=&o={p}",
-		"hot": "/search.php?q={k}&c=&l=&o={p}"
+		"preset": "/q/{k}.html",
+		"time": "/q/{k}.html?sort=time",
+		"size": "/q/{k}.html?sort=size"
 	  },
 	  "xpath": {
-		"group": "//div[@class='f_left']",
+		"group": "//div[@class='search-item']",
 		"magnet": "./div[1]/h3[1]/a[1]/@href",
 		"name": "./div[1]/h3[1]/a[1]",
-		"size": "./div[2]/span[3]/b[1]/font[1]",
-		"date": "./div[2]/span[6]/b[1]",
-		"hot": "./div[2]/span[5]/b[1]"
+		"size": "./div[3]/span[3]/b[1]",
+		"date": "./div[3]/span[2]/b[1]",
+		"hot": "./div[3]/span[4]/b[1]"
 	  }
 	},
+    {
+        "id": "btgg",
+        "name": "BTGG",
+        "proxy": false,
+        "url": "https://www.btgg.cc",
+        "paths": {
+            "preset": "/search?q={k}&p={p}"
+        },
+        "xpath": {
+            "group": "//div[@class=\"item\"]",
+            "magnet": "./div[2]/a/@href",
+            "name": "./div[1]/a",
+            "size": "./div[2]/span[1]",
+            "hot": "./div[2]/span[2]",
+            "date": "./div[2]/span[3]"
+        }
+    },
 	{
-	  "id": "cll4444",
-	  "name": "Magnet-Search",
-	  "url": "https://cll4444.xyz",
-	  "icon": "https://cll4444.xyz/favicon.ico",
+	  "id": "btmovi",
+	  "name": "磁力蜘蛛",
+	  "url": "http://www.btmovi.cloud",
+	  "icon": "http://www.btmovi.cloud/favicon.ico",
 	  "paths": {
-		"preset": "/{k}",
-		"hot": "http://exoclick.com",
-		"time": "/{k}/{p}c9f28c71686e8cf7be2d410d4b4da47aaff677b",
-		"size": "/{k}/{p}c9f28c71686e8cf7be2d410d4b4da47aaff677b"
+		"preset": "/so/{k}.html",
+		"time": "/so/{k}_time_{p}.html",
+		"size": "/so/{k}_size_{p}.html"
 	  },
 	  "xpath": {
-		"group": "//div[@class='k-listview-content']",
-		"magnet": "./a[1]/@href",
-		"name": "./a[1]",
-		"size": "./a[8]/small[1]",
-		"date": "./a[8]/small[1]",
-		"hot": "./a[8]/small[1]"
-	  }
-	},
-	{
-	  "id": "clp6",
-	  "name": "磁力爬",
-	  "url": "https://www.clp6.xyz",
-	  "icon": "https://www.clp6.xyz/favicon.ico",
-	  "paths": {
-		"preset": "/Search/{k}"
-	  },
-	  "xpath": {
-		"group": "//div[@class='panel-body']",
-		"magnet": "./input[1]/@value",
-		"name": "./h5[1]/a[1]",
-		"size": "./table[1]/tbody[1]/tr[1]/td[3]/span[1]/b[1]",
-		"date": "./table[1]/tbody[1]/tr[1]/td[4]/span[1]"
-	  }
-	},
-	{
-	  "id": "btfox8",
-	  "name": " btfox",
-	  "url": "http://btfox8.site",
-	  "icon": "http://btfox8.site/favicon.ico",
-	  "paths": {
-		"preset": "/s?wd={k}",
-		"size": "/s?wd={k}&sort=length"
-	  },
-	  "xpath": {
-		"group": "//div[@class='threadlist_content']",
-		"magnet": "./div[1]/div[1]/div[1]/a[1]/@href",
-		"name": "./div[1]/div[1]/div[1]/a[1]",
-		"size": "./div[2]",
-		"date": "./div[2]"
-	  }
-	},
-	{
-	  "id": "cilitiantang2030",
-	  "name": "磁力天堂",
-	  "url": "https://www.cilitiantang2030.xyz",
-	  "icon": "https://www.cilitiantang2030.xyz/favicon.ico",
-	  "paths": {
-		"preset": "/search/{k}_ctime_{p}.html",
-		"size": "/search/{k}_length_{p}.html"
-	  },
-	  "xpath": {
-		"group": "//div[@class='panel-body']",
-		"magnet": "./h5[1]/a[1]/@href",
-		"name": "./h5[1]/a[1]",
-		"size": "./table[1]/tbody[1]/tr[1]/td[2]/span[1]/b[1]",
-		"date": "./table[1]/tbody[1]/tr[1]/td[1]/span[1]/b[1]"
-	  }
-	},
-	{
-	  "id": "yuhuage6",
-	  "name": " 雨花阁搜索",
-	  "url": "https://www.yuhuage6.xyz",
-	  "icon": "https://www.yuhuage6.xyz/favicon.ico",
-	  "paths": {
-		"preset": "/search/{k}-{p}.html",
-		"size": "/search/{k}-{p}-size.html"
-	  },
-	  "xpath": {
-		"group": "//div[@class='search-item detail-width']",
+		"group": "//div[@class='search-item']",
 		"magnet": "./div[1]/h3[1]/a[1]/@href",
 		"name": "./div[1]/h3[1]/a[1]",
-		"size": "./div[3]/span[2]/b[1]",
-		"date": "./div[3]/span[5]/b[1]",
+		"size": "./div[3]/span[3]/b[1]",
+		"date": "./div[3]/span[2]/b[1]",
 		"hot": "./div[3]/span[4]/b[1]"
 	  }
 	},
 	{
+	  "id": "seed0",
+	  "name": "种子吧",
+	  "url": "http://seed0.biz",
+	  "icon": "http://seed0.biz/favicon.ico",
+	  "paths": {
+		"preset": "/search?wd={k}",
+		"time": "/search?wd={k}&sort=time",
+		"size": "/search?wd={k}&sort=size"
+	  },
+	  "xpath": {
+		"group": "//div[@class='media-body']",
+		"magnet": "./h4[1]/a[1]/@href",
+		"name": "./h4[1]/a[1]",
+		"size": "./div[2]/span[2]",
+		"date": "./div[2]/span[1]",
+		"hot": "./div[2]/span[3]"
+	  }
+	},
+    {
+     "id": "btsow",
+     "name": " BTSOW ",
+     "url": "https://btsow.one",
+     "icon": "https://btsow.one/favicon.ico",
+     "paths": {
+       "preset": "/search/{k}"
+     },
+     "xpath": {
+       "group": "//div[@class='row']",
+       "magnet": "./a[1]/@href",
+       "name": "./a[1]",
+       "size": "./div[1]",
+       "date": "./div[2]"
+     }
+    },
+    {
 	  "id": "btmulu5",
 	  "name": "BT目录",
 	  "url": "https://btmulu5.xyz",
@@ -144,219 +384,5 @@
 		"date": "./p[1]",
 		"hot": "./p[1]"
 	  }
-	},
-	{
-	  "id": "eclmy",
-	  "name": "磁力蚂蚁",
-	  "url": "http://www.eclmy.space",
-	  "icon": "http://www.eclmy.space/favicon.ico",
-	  "paths": {
-		"preset": "/search/{k}.htm",
-		"time": "/search/{k}/{p}-2.htm"
-	  },
-	  "xpath": {
-		"group": "//div[@class='resultItem']",
-		"magnet": "./div[2]",
-		"name": "./div[1]/a[1]",
-		"size": "./div[2]/b[1]",
-		"date": "./div[3]/span[3]/span[1]",
-		"hot": "./div[3]/span[1]/label[1]"
-	  }
-	},
-	{
-	  "id": "wx8088",
-	  "name": "无限磁力",
-	  "url": "http://wx8088.icu",
-	  "icon": "http://wx8088.icu/favicon.ico",
-	  "paths": {
-		"preset": "/search?word={k}",
-		"size": "/search?word={k}&sort=length",
-		"time": "/search?word={k}&sort=time"
-	  },
-	  "xpath": {
-		"group": "//ul[@class='list-group']",
-		"magnet": "./li[3]/div[1]/a[1]/@href",
-		"name": "./li[3]/div[1]/a[1]",
-		"size": "./li[18]/div[2]",
-		"date": "./li[20]/div[2]"
-	  }
-	},
-	{
-	  "id": "sbt1921",
-	  "name": "Sbt Magnet",
-	  "url": "http://sbt1921.xyz",
-	  "icon": "http://sbt1921.xyz/favicon.ico",
-	  "paths": {
-		"preset": "/search?word={k}",
-		"size": "/search?word={k}&sort=length",
-		"time": "/search?word={k}&sort=time"
-	  },
-	  "xpath": {
-		"group": "//ul[@class='list-group']",
-		"magnet": "./li[3]/div[1]/a[1]/@href",
-		"name": "./li[3]/div[1]/a[1]",
-		"size": "./li[18]/div[2]",
-		"date": "./li[20]/div[2]"
-	  }
-	},
-	{
-	  "id": "91btgo",
-	  "name": "磁力兽",
-	  "url": "https://91btgo.me",
-	  "icon": "https://91btgo.me/favicon.ico",
-	  "paths": {
-		"preset": "/search/{k}/{p}/undefined?from=user"
-	  },
-	  "xpath": {
-		"group": "//body/div[1]/div[2]/ul[1]/li[3]",
-		"magnet": "./a[1]/@href",
-		"name": "./a[1]",
-		"size": "./div[1]",
-		"date": "./div[1]"
-	  }
-	},
-	{
-	  "id": "im1108",
-	  "name": "磁力帝 ",
-	  "url": "https://bt.im1108.com",
-	  "icon": "https://bt.im1108.com/favicon.ico",
-	  "paths": {
-		"preset": "/search-{k}-{p}-0-1.html",
-		"size": "/search-{k}-{p}-1-1.html",
-		"time": "/search-{k}-{p}-2-1.html"
-	  },
-	  "xpath": {
-		"group": "//div[@class='ssbox']",
-		"magnet": "./div[3]/span[1]/a[1]/@href",
-		"name": "./div[1]/h3[1]/a[1]",
-		"size": "./div[3]/span[3]/b[1]",
-		"date": "./div[3]/span[4]/b[1]",
-		"hot": "./div[3]/span[5]/b[1]"
-	  }
-	},
-	{
-	  "id": "ciliaa",
-	  "name": "磁力窝",
-	  "url": "https://ciliaa.com",
-	  "icon": "https://ciliaa.com/favicon.ico",
-	  "paths": {
-		"preset": "/search/{k}/{p}/undefined?from=user"
-	  },
-	  "xpath": {
-		"group": "//body/div[1]/div[2]/ul[1]/li[3]",
-		"magnet": "./a[1]/@href",
-		"name": "./a[1]",
-		"size": "./div[1]",
-		"date": "./div[1]"
-	  }
-	},
-	{
-	  "id": "bt104",
-	  "name": "磁力岛",
-	  "url": "https://bt104.xyz",
-	  "icon": "https://bt104.xyz/favicon.ico",
-	  "paths": {
-		"preset": "/search?keyword={p}ce592795565ba2"
-	  },
-	  "xpath": {
-		"group": "//div[@class='el-card is-hover-shadow box-card']",
-		"magnet": "./div[1]/a[1]/@href",
-		"name": "./div[1]/a[1]",
-		"size": "./div[2]/div[1]",
-		"date": "./div[2]/div[1]"
-	  }
-	},
-	{
-	  "id": "cilixingqiu",
-	  "name": "磁力星球",
-	  "url": "https://cilixingqiu.co",
-	  "icon": "https://cilixingqiu.co/favicon.ico",
-	  "paths": {
-		"preset": "/s/{k}"
-	  },
-	  "xpath": {
-		"group": "//div[@class='related-article']",
-		"magnet": "./h1[1]/a[1]/@href",
-		"name": "./h1[1]/a[1]",
-		"size": "./div[1]/p[1]/b[2]",
-		"date": "./div[1]/p[1]/b[1]"
-	  }
-	},
-	{
-	  "id": "unx8c2sm",
-	  "name": " 磁力海 ",
-	  "url": "https://unx8c2sm.xyz",
-	  "icon": "https://unx8c2sm.xyz/favicon.ico",
-	  "paths": {
-		"preset": "/search-{k}-{p}-0-1.html",
-		"size": "/search-{k}-{p}-1-1.html",
-		"time": "/search-{k}-{p}-2-1.html"
-	  },
-	  "xpath": {
-		"group": "//dl[@class='detail']",
-		"magnet": "./dd[1]/span[6]/a[1]/@href",
-		"name": "./dt[1]/a[1]",
-		"size": "./ul[1]/li[1]/span[2]",
-		"date": "./dd[1]/span[4]/b[1]",
-		"hot": "./dd[1]/span[5]/b[1]"
-	  }
-	},
-	{
-	  "id": "ktz14ym9",
-	  "name": " 磁力树 ",
-	  "url": "https://ktz14ym9.xyz",
-	  "icon": "https://ktz14ym9.xyz/favicon.ico",
-	  "paths": {
-		"preset": "/search-{k}-{p}-0-1.html",
-		"size": "/search-{k}-{p}-1-1.html",
-		"time": "/search-{k}-{p}-2-1.html"
-	  },
-	  "xpath": {
-		"group": "//dl[@class='detail']",
-		"magnet": "./dd[1]/span[6]/a[1]/@href",
-		"name": "./dd[1]/span[6]/a[1]",
-		"size": "./ul[1]/li[4]/span[1]",
-		"date": "./dd[1]/span[4]/b[1]",
-		"hot": "./dd[1]/span[5]/b[1]"
-	  }
-	},
-	{
-	  "id": "btlm",
-	  "name": "BT联盟",
-	  "url": "https://cdn0.btlm.buzz:65533",
-	  "icon": "https://cdn0.btlm.buzz:65533/favicon.ico",
-	  "paths": {
-		"preset": "/s?word={k}",
-		"size": "/s?word={k}&sort=size",
-		"hot": "/s?word={k}&sort=viewnum",
-		"time": "/s?word={k}&sort=date"
-	  },
-	  "xpath": {
-		"group": "//div[@class='container-fluid']",
-		"magnet": "./div[3]/div[2]/ul[1]/li[2]/a[1]/@href",
-		"name": "./div[3]/div[2]/ul[1]/li[2]/a[1]",
-		"size": "./div[6]/div[2]/ul[18]/li[3]/span[2]",
-		"date": "./div[6]/div[2]/ul[18]/li[2]/span[3]",
-		"hot": "./div[6]/div[2]/nav[1]/ul[1]/li[6]/a[1]"
-	  }
-	},
-	{
-	  "id": "btmirror",
-	  "name": "BTMirror",
-	  "url": "https://www.btmirror.me",
-	  "icon": "https://www.btmirror.me/favicon.ico",
-	  "paths": {
-		"preset": "/so/{k}/",
-		"time": "./?c=&s=create_time",
-		"size": "./?c=&s=length"
-	  },
-	  "xpath": {
-		"group": "//dl[@class='item']",
-		"magnet": "./dt[2]/a[1]/@href",
-		"name": "./dt[2]/a[1]",
-		"size": "./dd[10]/span[4]/b[1]",
-		"date": "./dd[10]/span[3]/b[1]",
-		"hot": "./div[11]/ul[1]/a[10]"
-	  }
-    }
+	}
 ]
