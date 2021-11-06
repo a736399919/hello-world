@@ -20,6 +20,8 @@ sed -i "s/HiWiFi/CMCC/g" `grep HiWiFi -rl target`
 sed -i "s/hiwifi/cmcc/g" `grep hiwifi -rl target`
 cp target/linux/ramips/dts/mt7621_hiwifi_hc5962.dts target/linux/ramips/dts/mt7621_cmcc_an1201l.dts
 touch target/linux/*/Makefile
+mv ../config/mt7621_hiwifi_hc5962.dts target/linux/ramips/dts/mt7621_hiwifi_hc5962.dts
+mv ../config/02_network target/linux/ramips/mt7621/base-files/etc/board.d/02_network
 
 #添加自定义插件
 svn co https://github.com/Lienol/openwrt-package/trunk/luci-app-fileassistant package/luci-app-fileassistan
