@@ -29,7 +29,7 @@ svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-theme-edge package
 git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon-1.7.2
 
 #修改lan口地址
-sed -i 's/192.168.1.1/192.168.10.1/g' package/base-files/files/bin/config_generate
+sed -i 's/192.168.1.1/192.168.10.1/g' package/base-files/files/bin/config_generate                                  
 #修改机器名称
 sed -i 's/OpenWrt/AN1201L/g' package/base-files/files/bin/config_generate
 #修改wifi名称
@@ -41,4 +41,3 @@ sed -i 's/disabled=1/disabled=0/g' package/kernel/mac80211/files/lib/wifi/mac802
 
 #加载config
 [ -e ../config/an1201l-lean.config ] && mv -f ../config/an1201l-lean.config .config
-
