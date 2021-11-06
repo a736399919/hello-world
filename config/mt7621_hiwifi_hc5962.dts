@@ -38,7 +38,7 @@
 
 		reset {
 			label = "reset";
-			gpios = <&gpio 18 GPIO_ACTIVE_HIGH>;
+			gpios = <&gpio 15 GPIO_ACTIVE_HIGH>;
 			linux,code = <KEY_RESTART>;
 		};
 	};
@@ -133,22 +133,17 @@
 	ports {
 		port@1 {
 			status = "okay";
-			label = "lan1";
+			label = "wan";
 		};
 
 		port@2 {
 			status = "okay";
-			label = "lan2";
+			label = "lan1";
 		};
 
 		port@3 {
 			status = "okay";
-			label = "lan3";
-		};
-
-		port@4 {
-			status = "okay";
-			label = "wan";
+			label = "lan2";
 		};
 	};
 };
