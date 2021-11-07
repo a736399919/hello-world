@@ -6,21 +6,22 @@
 #   Blog: https://p3terx.com
 #=================================================
 #克隆源码
-git clone -b main --single-branch https://github.com/Lienol/openwrt openwrt
+#git clone -b main --single-branch https://github.com/Lienol/openwrt openwrt
+git clone https://github.com/danxiaonuo/uola-os openwrt
 cd openwrt
 #添加passwall
-sed -i '$a src-git xiaorouji https://github.com/xiaorouji/openwrt-passwall.git' feeds.conf.default
-./scripts/feeds clean
+#sed -i '$a src-git xiaorouji https://github.com/xiaorouji/openwrt-passwall.git' feeds.conf.default
+#./scripts/feeds clean
 ./scripts/feeds update -a
 ./scripts/feeds install -a
 
-sed -i "s/hiwifi_hc5962/cmcc_an1201l/g" `grep hiwifi_hc5962 -rl target`
-sed -i "s/HC5962/AN1201L/g" `grep HC5962 -rl target`
-sed -i "s/hc5962/an1201l/g" `grep hc5962 -rl target`
-sed -i "s/HiWiFi/CMCC/g" `grep HiWiFi -rl target`
-sed -i "s/hiwifi/cmcc/g" `grep hiwifi -rl target`
-cp target/linux/ramips/dts/mt7621_hiwifi_hc5962.dts target/linux/ramips/dts/mt7621_cmcc_an1201l.dts
-touch target/linux/*/Makefile
+#sed -i "s/hiwifi_hc5962/cmcc_an1201l/g" `grep hiwifi_hc5962 -rl target`
+#sed -i "s/HC5962/AN1201L/g" `grep HC5962 -rl target`
+#sed -i "s/hc5962/an1201l/g" `grep hc5962 -rl target`
+#sed -i "s/HiWiFi/CMCC/g" `grep HiWiFi -rl target`
+#sed -i "s/hiwifi/cmcc/g" `grep hiwifi -rl target`
+#cp target/linux/ramips/dts/mt7621_hiwifi_hc5962.dts target/linux/ramips/dts/mt7621_cmcc_an1201l.dts
+#touch target/linux/*/Makefile
 
 #添加主题
 svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-theme-edge package/luci-theme-edge
