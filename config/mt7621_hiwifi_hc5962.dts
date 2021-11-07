@@ -131,20 +131,21 @@
 
 &switch0 {
 	ports {
-		port@1 {
-			status = "okay";
-			label = "wan";
-		};
-
+	
 		port@2 {
 			status = "okay";
-			label = "lan1";
+			label = "wan";
 		};
 
 		port@3 {
 			status = "okay";
 			label = "lan2";
 		};
+		
+		port@4 {
+			status = "okay";
+			label = "lan3";
+		};		
 	};
 };
 
