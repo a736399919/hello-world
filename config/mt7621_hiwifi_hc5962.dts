@@ -4,8 +4,8 @@
 #include <dt-bindings/input/input.h>
 
 / {
-	compatible = "cmcc,an1201l", "mediatek,mt7621-soc";
-	model = "CMCC AN1201L";
+	compatible = "hiwifi,hc5962", "mediatek,mt7621-soc";
+	model = "HiWiFi HC5962";
 
 	aliases {
 		led-boot = &led_system;
@@ -38,7 +38,7 @@
 
 		reset {
 			label = "reset";
-			gpios = <&gpio 15 GPIO_ACTIVE_HIGH>;
+			gpios = <&gpio 18 GPIO_ACTIVE_HIGH>;
 			linux,code = <KEY_RESTART>;
 		};
 	};
@@ -129,24 +129,19 @@
 	};
 };
 
-&switch0 {
-	ports {
-		port@1 {
-			status = "okay";
-			label = "wan";
-		};
-
-		port@2 {
-			status = "okay";
-			label = "lan1";
-		};
-
-		port@3 {
-			status = "okay";
-			label = "lan2";
-		};
-	};
+&ethernet {
+	compatible = "mediatek,ralink-mt7621-eth";
+	mediatek,switch = <&gsw>;
 };
+
+&switch0 {
+	/delete-property/ compatible;
+	phy-mode = "rgmii";
+};
+
++&gsw {
++	compatible = "mediatek,ralink-mt7621-gsw";
+ };
 
 &state_default {
 	gpio {
