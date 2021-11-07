@@ -13,21 +13,20 @@ sed -i '$a src-git xiaorouji https://github.com/xiaorouji/openwrt-passwall.git' 
 ./scripts/feeds update -a
 ./scripts/feeds install -a
 
-mv ../config/1mt7621_hiwifi_hc5962.dts target/linux/ramips/dts/mt7621_hiwifi_hc5962.dts
-mv ../config/1-02_network target/linux/ramips/mt7621/base-files/etc/board.d/02_network
-sed -i "s/hiwifi_hc5962/cmcc_an1201l/g" `grep hiwifi_hc5962 -rl target`
+mv ../HC5962.dts target/linux/ramips/dts/HC5962.dts
+mv ../02_network target/linux/ramips/base-files/etc/board.d/02_network
 sed -i "s/HC5962/AN1201L/g" `grep HC5962 -rl target`
 sed -i "s/hc5962/an1201l/g" `grep hc5962 -rl target`
 sed -i "s/HiWiFi/CMCC/g" `grep HiWiFi -rl target`
 sed -i "s/hiwifi/cmcc/g" `grep hiwifi -rl target`
-cp target/linux/ramips/dts/mt7621_hiwifi_hc5962.dts target/linux/ramips/dts/mt7621_cmcc_an1201l.dts
+cp target/linux/ramips/dts/HC5962.dts target/linux/ramips/dts/AN1201L.dts
 touch target/linux/*/Makefile
 
 #添加自定义插件
 svn co https://github.com/Lienol/openwrt-package/trunk/luci-app-fileassistant package/luci-app-fileassistan
 
 #添加主题
-git clone https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon-1.7.2
+git clone https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon
 
 #修改lan口地址
 sed -i 's/192.168.1.1/192.168.10.1/g' package/base-files/files/bin/config_generate                                  
