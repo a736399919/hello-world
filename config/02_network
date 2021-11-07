@@ -21,15 +21,15 @@ ramips_setup_interfaces()
 	ubnt,unifi-nanohd)
 		ucidef_set_interface_lan "lan"
 		;;
-	ampedwireless,ally-r1900k|\
-	cmcc,an1201l|\
+	ampedwireless,ally-r1900k|\	
 	xiaomi,mi-router-3-pro|\
 	xiaomi,mi-router-cr660x)
 		ucidef_set_interfaces_lan_wan "lan1 lan2 lan3" "wan"
 		;;
-	cmcc,an1201l)
-		ucidef_set_interfaces_lan_wan "lan1 lan2" "wan"
-		;;
+	hiwifi,hc5962)
+		ucidef_add_switch "switch0" \
+			"3:lan" "4:lan" "2:wan" "6@eth0"
+		;;		
 	asiarf,ap7621-001|\
 	winstars,ws-wn583a6)
 		ucidef_set_interfaces_lan_wan "lan" "wan"
@@ -163,7 +163,7 @@ ramips_setup_macs()
 		lan_mac=$(cat /sys/class/net/eth0/address)
 		wan_mac=$(macaddr_add "$lan_mac" 1)
 		;;
-	cmcc,an1201l)
+	hiwifi,hc5962)
 		lan_mac=$(mtd_get_mac_ascii bdinfo "Vfac_mac ")
 		label_mac=$lan_mac
 		[ -n "$lan_mac" ] || lan_mac=$(cat /sys/class/net/eth0/address)
