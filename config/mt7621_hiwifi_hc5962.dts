@@ -12,7 +12,6 @@
 		led-failsafe = &led_system;
 		led-running = &led_status;
 		led-upgrade = &led_status;
-		label-mac-device = &ethernet;
 	};
 
 	chosen {
@@ -130,19 +129,23 @@
 	};
 };
 
-&ethernet {
-	compatible = "mediatek,ralink-mt7621-eth";
-	mediatek,switch = <&gsw>;
-	mtd-mac-address = <&factory 0xe000>;
-};
-
 &switch0 {
-	/delete-property/ compatible;
-	phy-mode = "rgmii";
-};
+	ports {
+		port@1 {
+			status = "okay";
+			label = "wan";
+		};
 
-&gsw {
-	compatible = "mediatek,ralink-mt7621-gsw";
+		port@2 {
+			status = "okay";
+			label = "lan1";
+		};
+
+		port@3 {
+			status = "okay";
+			label = "lan2";
+		};
+	};
 };
 
 &state_default {
