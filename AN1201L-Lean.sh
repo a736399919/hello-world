@@ -13,16 +13,6 @@ sed -i '$a src-git xiaorouji https://github.com/xiaorouji/openwrt-passwall.git' 
 ./scripts/feeds update -a
 ./scripts/feeds install -a
 
-sed -i "s/hiwifi_hc5962/cmcc_an1201l/g" `grep hiwifi_hc5962 -rl target`
-sed -i "s/HC5962/AN1201L/g" `grep HC5962 -rl target`
-sed -i "s/hc5962/an1201l/g" `grep hc5962 -rl target`
-sed -i "s/HiWiFi/CMCC/g" `grep HiWiFi -rl target`
-sed -i "s/hiwifi/cmcc/g" `grep hiwifi -rl target`
-cp target/linux/ramips/dts/mt7621_hiwifi_hc5962.dts target/linux/ramips/dts/mt7621_cmcc_an1201l.dts
-touch target/linux/*/Makefile
-mv ../config/mt7621_hiwifi_hc5962.dts target/linux/ramips/dts/mt7621_cmcc_an1201l.dts
-mv ../config/02_network target/linux/ramips/mt7621/base-files/02_network
-
 #添加自定义插件
 svn co https://github.com/Lienol/openwrt-package/trunk/luci-app-fileassistant package/luci-app-fileassistan
 
