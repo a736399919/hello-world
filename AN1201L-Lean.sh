@@ -13,8 +13,8 @@ sed -i '$a src-git xiaorouji https://github.com/xiaorouji/openwrt-passwall.git' 
 ./scripts/feeds update -a
 ./scripts/feeds install -a
 
-mv ../config/1mt7621_hiwifi_hc5962.dts target/linux/ramips/dts/mt7621_hiwifi_hc5962.dts
-mv ../config/1-02_network target/linux/ramips/mt7621/base-files/etc/board.d/02_network
+mv ../config/mt7621_hiwifi_hc5962.dts target/linux/ramips/dts/mt7621_hiwifi_hc5962.dts
+mv ../config/02_network target/linux/ramips/mt7621/base-files/etc/board.d/02_network
 sed -i "s/hiwifi_hc5962/cmcc_an1201l/g" `grep hiwifi_hc5962 -rl target`
 sed -i "s/HC5962/AN1201L/g" `grep HC5962 -rl target`
 sed -i "s/hc5962/an1201l/g" `grep hc5962 -rl target`
@@ -42,4 +42,4 @@ sed -i 's/disabled=1/disabled=0/g' package/kernel/mac80211/files/lib/wifi/mac802
 #sed -i "s/'UTC'/'CST-8'\n        set system.@system[-1].zonename='Asia\/Shanghai'/g" package/base-files/files/bin/config_generate
 
 #加载config
-[ -e ../config/an1201l-lean.config ] && mv -f ../config/an1201l-lean.config .config
+[ -e ../config/Boos4721_an1201l.config ] && mv -f ../config/Boos4721_an1201l.config .config
