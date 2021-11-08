@@ -13,6 +13,8 @@ sed -i '$a src-git xiaorouji https://github.com/xiaorouji/openwrt-passwall.git' 
 ./scripts/feeds update -a
 ./scripts/feeds install -a
 
+rm -rf target
+svn co https://github.com/Lienol/openwrt/trunk/target target
 mv ../config/mt7621_hiwifi_hc5962.dts target/linux/ramips/dts/mt7621_hiwifi_hc5962.dts
 mv ../config/02_network target/linux/ramips/mt7621/base-files/etc/board.d/02_network
 sed -i "s/hiwifi_hc5962/cmcc_an1201l/g" `grep hiwifi_hc5962 -rl target`
