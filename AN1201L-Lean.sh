@@ -42,4 +42,4 @@ sed -i 's/disabled=1/disabled=0/g' package/kernel/mac80211/files/lib/wifi/mac802
 #sed -i "s/'UTC'/'CST-8'\n        set system.@system[-1].zonename='Asia\/Shanghai'/g" package/base-files/files/bin/config_generate
 
 #加载config
-[ -e ../config/Boos4721_an1201l.config ] && mv -f ../config/Boos4721_an1201l.config .config
+[ -e ../config/an1201l-lean.config ] && mv -f ../config/an1201l-lean.config .config
