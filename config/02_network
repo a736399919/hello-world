@@ -29,6 +29,7 @@ ramips_setup_interfaces()
 	hiwifi,hc5962)
 		ucidef_add_switch "switch0" \
 			"3:lan:1" "4:lan:2" "2:wan" "6@eth0"
+		ucidef_set_interface_lan "eth0.1 ra0 rai0"	
 		;;		
 	asiarf,ap7621-001|\
 	winstars,ws-wn583a6)
