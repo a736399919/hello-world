@@ -56,7 +56,7 @@ ramips_setup_interfaces()
 		;;
 	hiwifi,hc5962)
 		ucidef_add_switch "switch0" \
-			"3:lan:1" "4:lan:2" "2:wan:3" "6@eth0"
+			"3:lan:1" "4:lan:2" "2:wan:0" "6@eth0"
 		;;
 	linksys,re6500|\
 	netgear,wac104)
