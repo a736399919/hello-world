@@ -6,7 +6,7 @@
 #   Blog: https://p3terx.com
 #=================================================
 #克隆源码
-git clone -b openwrt-19.07 --single-branch https://github.com/openwrt/openwrt
+git clone -b 19.07 --single-branch https://github.com/Lienol/openwrt openwrt
 cd openwrt
 #添加passwall
 sed -i '$a src-git xiaorouji https://github.com/xiaorouji/openwrt-passwall.git' feeds.conf.default
@@ -26,7 +26,7 @@ touch target/linux/*/Makefile
 svn co https://github.com/Lienol/openwrt-package/trunk/luci-app-fileassistant package/luci-app-fileassistan
 
 #添加主题
-git clone https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon
+git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon-1.7.2
 
 #修改lan口地址
 sed -i 's/192.168.1.1/192.168.10.1/g' package/base-files/files/bin/config_generate                                  
@@ -40,4 +40,4 @@ sed -i 's/disabled=1/disabled=0/g' package/kernel/mac80211/files/lib/wifi/mac802
 #sed -i "s/'UTC'/'CST-8'\n        set system.@system[-1].zonename='Asia\/Shanghai'/g" package/base-files/files/bin/config_generate
 
 #加载config
-[ -e ../config/an1201l-openwrt.config ] && mv -f ../config/an1201l-openwrt.config .config
+[ -e ../config/an1201l-lienol.config ] && mv -f ../config/an1201l-lienol.config .config
