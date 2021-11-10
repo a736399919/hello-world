@@ -6,10 +6,11 @@
 #   Blog: https://p3terx.com
 #=================================================
 #克隆源码
-git clone -b openwrt-21.02 https://github.com/openwrt/openwrt
+git clone -b main --single-branch https://github.com/Lienol/openwrt openwrt
 cd openwrt
 #添加passwall
 sed -i '$a src-git xiaorouji https://github.com/xiaorouji/openwrt-passwall.git' feeds.conf.default
+./scripts/feeds clean
 ./scripts/feeds update -a
 ./scripts/feeds install -a
 
@@ -41,6 +42,5 @@ sed -i 's/disabled=1/disabled=0/g' package/kernel/mac80211/files/lib/wifi/mac802
 #修改时区
 #sed -i "s/'UTC'/'CST-8'\n        set system.@system[-1].zonename='Asia\/Shanghai'/g" package/base-files/files/bin/config_generate
 
-wget -q -O - https://github.com/upx/upx/releases/download/v3.96/upx-3.96-amd64_linux.tar.xz | tar -Jx --strip 1 -f - -C staging_dir/host/bin upx-3.96-amd64_linux/upx
 #加载config
-[ -e ../config/an1201l-op.config ] && mv -f ../config/an1201l-op.config .config
+[ -e ../config/an1201l-Lienol.config ] && mv -f ../config/an1201l-Lienol .config
