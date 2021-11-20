@@ -61,6 +61,6 @@ sed -i '/exit 0/i\chmod 775 /usr/bin/webd' package/lean/default-settings/files/z
 #修改banner
 rm -rf package/base-files/files/etc/banner
 cp -f ../banner-miwifi package/base-files/files/etc/banner
-#[ -e ../files ] && mv ../files files
+[ -e ../files ] && mv ../files files
 [ -e ../mi-default.config ] && mv ../mi-default.config .config
 cp -rf ../lean-mi.config .config
