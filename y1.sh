@@ -19,13 +19,13 @@ sed -i '$a src-git xiaorouji https://github.com/xiaorouji/openwrt-passwall.git' 
 git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon-1.7.2
 
 #修改lan口地址
-sed -i 's/192.168.1.1/192.168.10.1/g' package/base-files/files/bin/config_generate
+#sed -i 's/192.168.1.1/192.168.10.1/g' package/base-files/files/bin/config_generate
 
 #修改机器名称
-sed -i 's/OpenWrt/Newifi-Y1/g' package/base-files/files/bin/config_generate
+sed -i 's/OpenWrt/MiWiFi/g' package/base-files/files/bin/config_generate
 
 #修改wifi名称
-sed -i 's/OpenWrt/FK20100010/g' package/kernel/mac80211/files/lib/wifi/mac80211.sh
+sed -i 's/OpenWrt/MiWiFi_Mini/g' package/kernel/mac80211/files/lib/wifi/mac80211.sh
 #默认打开WiFi
 sed -i 's/disabled=1/disabled=0/g' package/kernel/mac80211/files/lib/wifi/mac80211.sh
 
@@ -46,6 +46,6 @@ sed -i '/exit 0/i\chmod 775 /usr/bin/webd' package/default-settings/files/zzz-de
 
 #修改banner
 rm -rf package/base-files/files/etc/banner
-cp -f ../banner-y1 package/base-files/files/etc/banner
-#[ -e ../files ] && mv ../files files
+cp -f ../banner-miwifi package/base-files/files/etc/banner
+[ -e ../files ] && mv ../files files
 [ -e ../Lienol-y1.config ] && mv ../Lienol-y1.config .config
