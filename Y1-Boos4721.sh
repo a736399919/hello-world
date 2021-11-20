@@ -18,7 +18,7 @@ cd openwrt
 git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon-1.7.2
 
 #修改lan口地址
-#sed -i 's/10.10.10.1/192.168.10.1/g' package/base-files/files/bin/config_generate
+sed -i 's/10.10.10.1/192.168.10.1/g' package/base-files/files/bin/config_generate
 #修改机器名称
 sed -i 's/OpenWrt/MiWiFi_Mini/g' package/base-files/files/bin/config_generate
 #修改wifi名称
