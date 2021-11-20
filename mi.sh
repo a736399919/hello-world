@@ -37,13 +37,13 @@ git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/luc
 #sed -i '/background-image/d' package/luci-theme-argon-1.5.1/luasrc/view/themes/argon/header.htm
 
 #修改lan口地址
-sed -i 's/192.168.1.1/192.168.10.1/g' package/base-files/files/bin/config_generate
+#sed -i 's/192.168.1.1/192.168.10.1/g' package/base-files/files/bin/config_generate
 
 #修改机器名称
-sed -i 's/OpenWrt/Y1IWIFI/g' package/base-files/files/bin/config_generate
+sed -i 's/OpenWrt/MiWIFI/g' package/base-files/files/bin/config_generate
 
 #修改wifi名称
-sed -i 's/OpenWrt/Y1WIFI/g' package/kernel/mac80211/files/lib/wifi/mac80211.sh
+sed -i 's/OpenWrt/MiWiFi/g' package/kernel/mac80211/files/lib/wifi/mac80211.sh
 #默认打开WiFi
 sed -i 's/disabled=1/disabled=0/g' package/kernel/mac80211/files/lib/wifi/mac80211.sh
 
