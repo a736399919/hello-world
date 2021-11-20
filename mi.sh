@@ -58,6 +58,10 @@ sed -i '/exit 0/i\mkdir -pv /srv/webd/web/.Trash\n' package/lean/default-setting
 sed -i '/exit 0/i\ln -sv /mnt/sda1 /srv/webd/web/U盘\n' package/lean/default-settings/files/zzz-default-settings
 sed -i '/exit 0/i\chmod 775 /usr/bin/webd' package/lean/default-settings/files/zzz-default-settings
 
+
+
+rm -rf package/lean/luci-app-nps
+svn co https://github.com/Boos4721/openwrt/trunk/package/lean/luci-app-nps package/lean/luci-app-nps
 #修改banner
 rm -rf package/base-files/files/etc/banner
 cp -f ../banner-miwifi package/base-files/files/etc/banner
