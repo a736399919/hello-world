@@ -25,6 +25,7 @@ cp target/linux/ramips/dts/mt7621_hiwifi_hc5962.dts target/linux/ramips/dts/mt76
 touch target/linux/*/Makefile
 
 #添加自定义插件
+git clone https://github.com/small-5/luci-app-adblock-plus.git package/luci-app-adblock-plus
 svn co https://github.com/Lienol/openwrt-package/trunk/luci-app-fileassistant package/luci-app-fileassistan
 git clone https://github.com/ntlf9t/luci-app-easymesh package/luci-app-easymesh
 #添加主题
