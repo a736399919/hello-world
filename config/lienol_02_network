@@ -29,9 +29,6 @@ ramips_setup_interfaces()
 	xiaomi,redmi-router-ac2100)
 		ucidef_set_interfaces_lan_wan "lan1 lan2 lan3" "wan"
 		;;
-  hiwifi,hc5962|\
-		ucidef_set_interfaces_lan_wan "lan1 lan2" "wan"
-		;;
 	asiarf,ap7621-001|\
 	winstars,ws-wn583a6)
 		ucidef_set_interfaces_lan_wan "lan" "wan"
@@ -44,6 +41,7 @@ ramips_setup_interfaces()
 	xiaomi,mi-router-3g|\
 	xiaomi,mi-router-3g-v2|\
 	xiaomi,mi-router-4|\
+        hiwifi,hc5962|\
 	xiaomi,mi-router-4a-gigabit)
 		ucidef_set_interfaces_lan_wan "lan1 lan2" "wan"
 		;;
