@@ -26,12 +26,11 @@ touch target/linux/*/Makefile
 
 #添加自定义插件
 git clone https://github.com/small-5/luci-app-adblock-plus.git package/luci-app-adblock-plus
-svn co https://github.com/Lienol/openwrt-package/trunk/luci-app-fileassistant package/luci-app-fileassistan
 git clone https://github.com/ntlf9t/luci-app-easymesh package/luci-app-easymesh
 #添加主题
 git clone https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon-2.2.9
 svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-theme-edge package/luci-theme-edge
-git clone https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon
+git clone https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon-1.7.2
 
 #修改lan口地址
 sed -i 's/192.168.1.1/192.168.10.1/g' package/base-files/files/bin/config_generate                                  
