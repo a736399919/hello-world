@@ -82,8 +82,8 @@ jobs:
       run: |
        #[ -e files ] && mv files openwrt/files
        #[ -e $CONFIG_FILE ] && mv $CONFIG_FILE openwrt/.config
-        chmod +x ./AN1201L.sh
-        ./AN1201L.sh
+        chmod +x ./AN1201L-Lienol.sh
+        ./AN1201L-Lienol.sh
         cd openwrt
 
     - name: SSH connection to Actions
