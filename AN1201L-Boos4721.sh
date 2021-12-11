@@ -20,11 +20,15 @@ sed -i "s/HiWiFi/CMCC/g" `grep HiWiFi -rl target`
 sed -i "s/hiwifi/cmcc/g" `grep hiwifi -rl target`
 cp target/linux/ramips/dts/mt7621_hiwifi_hc5962.dts target/linux/ramips/dts/mt7621_cmcc_an1201l.dts
 touch target/linux/*/Makefile
-rm -rf package/kernel/mt76
-svn co https://github.com/coolsnowwolf/lede/trunk/package/kernel/mt76 package/kernel/mt76
+#rm -rf package/kernel/mt76
+#svn co https://github.com/coolsnowwolf/lede/trunk/package/kernel/mt76 package/kernel/mt76
 #添加主题
 svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-theme-edge package/luci-theme-edge
 git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon-1.7.2
+
+#添加自定义插件
+git clone https://github.com/small-5/luci-app-adblock-plus.git package/luci-app-adblock-plus
+git clone https://github.com/ntlf9t/luci-app-easymesh package/luci-app-easymesh
 
 #修改lan口地址
 sed -i 's/10.10.10.1/192.168.10.1/g' package/base-files/files/bin/config_generate
