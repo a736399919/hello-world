@@ -43,5 +43,11 @@ sed -i 's/disabled=1/disabled=0/g' package/kernel/mac80211/files/lib/wifi/mac802
 #修改时区
 #sed -i "s/'UTC'/'CST-8'\n        set system.@system[-1].zonename='Asia\/Shanghai'/g" package/base-files/files/bin/config_generate
 
+sed -i '/exit 0/i\uci set network.wan.macaddr=F0:68:65:0C:51:98' package/default-settings/files/zzz-default-settings
+sed -i '/exit 0/i\uci set network.lan.macaddr=F0:68:65:0C:51:97' package/default-settings/files/zzz-default-settings
+sed -i '/exit 0/i\uci commit network' package/default-settings/files/zzz-default-settings
+sed -i '/exit 0/i\ifdown wan && ifup wan' package/default-settings/files/zzz-default-settings
+sed -i '/exit 0/i\ifdown lan && ifup lan' package/default-settings/files/zzz-default-settings
+
 #加载config
 [ -e ../config/an1201l-Lienol.config ] && mv -f ../config/an1201l-Lienol.config .config
