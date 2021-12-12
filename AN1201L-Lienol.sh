@@ -6,7 +6,7 @@
 #   Blog: https://p3terx.com
 #=================================================
 #克隆源码
-git clone -b main --single-branch https://github.com/Lienol/openwrt openwrt
+git clone -b 21.02 --single-branch https://github.com/Lienol/openwrt openwrt
 cd openwrt
 #添加passwall
 sed -i '$a src-git xiaorouji https://github.com/xiaorouji/openwrt-passwall.git' feeds.conf.default
