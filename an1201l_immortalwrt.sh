@@ -47,4 +47,4 @@ sed -i 's/disabled=1/disabled=0/g' package/kernel/mac80211/files/lib/wifi/mac802
 #sed -i '/exit 0/i\ifdown lan && ifup lan' package/default-settings/files/zzz-default-settings
 
 #加载config
-[ -e ../config/immortalwrt_an1201l.config ] && mv -f ../config/immortalwrt_an1201l.config .config
+[ -e ../config/4.14_immortalwrt_an1201l.config ] && mv -f ../config/4.14_immortalwrt_an1201l.config .config
