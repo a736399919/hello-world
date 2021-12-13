@@ -47,4 +47,4 @@ sed -i '/exit 0/i\ifdown wan && ifup wan' package/emortal/default-settings/files
 sed -i '/exit 0/i\ifdown lan && ifup lan' package/emortal/default-settings/files/99-default-settings
 
 #加载config
-[ -e ../config/an1201l-lean.config ] && mv -f ../config/an1201l-lean.config .config
+[ -e ../config/immortalwrt_an1201l.config ] && mv -f ../config/immortalwrt_an1201l.config .config
