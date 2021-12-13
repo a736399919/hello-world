@@ -6,7 +6,7 @@
 #   Blog: https://p3terx.com
 #=================================================
 #克隆源码
-git clone -b openwrt-18.06 --single-branch https://github.com/immortalwrt/immortalwrt openwrt
+git clone -b openwrt-21.02 --single-branch https://github.com/immortalwrt/immortalwrt openwrt
 cd openwrt
 ./scripts/feeds update -a
 ./scripts/feeds install -a
@@ -47,4 +47,4 @@ sed -i '/exit 0/i\ifdown wan && ifup wan' package/emortal/default-settings/files
 sed -i '/exit 0/i\ifdown lan && ifup lan' package/emortal/default-settings/files/99-default-settings
 
 #加载config
-[ -e ../config/4.14_immortalwrt_an1201l.config ] && mv -f ../config/4.14_immortalwrt_an1201l.config .config
+[ -e ../config/an1201l-lean.config ] && mv -f ../config/an1201l-lean.config .config
