@@ -6,7 +6,7 @@
 #   Blog: https://p3terx.com
 #=================================================
 #克隆源码
-git clone https://github.com/x-wrt/x-wrt.git openwrt
+git clone -b master --single-branch https://github.com/openwrt/openwrt.git openwrt
 
 svn co https://github.com/Lienol/openwrt/trunk/tools/ucl openwrt/tools/ucl
 svn co https://github.com/Lienol/openwrt/trunk/tools/upx openwrt/tools/upx
