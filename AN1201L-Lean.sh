@@ -27,6 +27,7 @@ touch target/linux/*/Makefile
 svn co https://github.com/Lienol/openwrt-package/trunk/luci-app-fileassistant package/luci-app-fileassistan
 git clone https://github.com/small-5/luci-app-adblock-plus.git package/luci-app-adblock-plus
 git clone https://github.com/ntlf9t/luci-app-easymesh package/luci-app-easymesh
+git clone https://github.com/KFERMercer/luci-app-tcpdump.git package/luci-app-tcpdump
 
 #添加主题
 svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-theme-edge package/luci-theme-edge
