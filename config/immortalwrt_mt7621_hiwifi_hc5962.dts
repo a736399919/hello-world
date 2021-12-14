@@ -131,7 +131,7 @@
 
 &switch0 {
 	ports {
-		wan: port@2 {
+		port@2 {
 			status = "okay";
 			label = "wan";
 		};
