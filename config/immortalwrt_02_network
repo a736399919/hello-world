@@ -32,9 +32,10 @@ ramips_setup_interfaces()
 	asiarf,ap7621-001|\
 	winstars,ws-wn583a6)
 		ucidef_set_interfaces_lan_wan "lan" "wan"
-		;;  
+		;;
 	asiarf,ap7621-nv1|\
 	glinet,gl-mt1300|\
+	hiwifi,hc5962|\
 	jcg,q20|\
 	lenovo,newifi-d1|\
 	mikrotik,routerboard-m33g|\
@@ -43,9 +44,6 @@ ramips_setup_interfaces()
 	xiaomi,mi-router-4|\
 	xiaomi,mi-router-4a-gigabit)
 		ucidef_set_interfaces_lan_wan "lan1 lan2" "wan"
-		;;
-	hiwifi,hc5962)
-	        ucidef_set_interfaces_lan_wan "lan1 lan2" "wan"
 		;;
 	gnubee,gb-pc1|\
 	gnubee,gb-pc2)
