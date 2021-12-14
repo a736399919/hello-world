@@ -8,7 +8,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: AN1201L-xwrt
+name: AN1201L-openwrt
 
 on:
   repository_dispatch:
@@ -82,8 +82,8 @@ jobs:
       run: |
        #[ -e files ] && mv files openwrt/files
        #[ -e $CONFIG_FILE ] && mv $CONFIG_FILE openwrt/.config
-        chmod +x ./AN1201L-xwrt.sh
-        ./AN1201L-xwrt.sh
+        chmod +x ./AN1201L-openwrt.sh
+        ./AN1201L-openwrt.sh
         cd openwrt
 
     - name: SSH connection to Actions
