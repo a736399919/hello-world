@@ -34,6 +34,7 @@ touch target/linux/*/Makefile
 #添加自定义插件
 git clone https://github.com/small-5/luci-app-adblock-plus.git package/luci-app-adblock-plus
 git clone https://github.com/ntlf9t/luci-app-easymesh package/luci-app-easymesh
+git clone https://github.com/KFERMercer/luci-app-tcpdump.git package/luci-app-tcpdump
 #添加主题
 git clone https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon-2.2.9
 svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-theme-edge package/luci-theme-edge
