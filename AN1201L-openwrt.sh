@@ -6,7 +6,7 @@
 #   Blog: https://p3terx.com
 #=================================================
 #克隆源码
-git clone -b 21.10 --single-branch https://github.com/x-wrt/x-wrt.git openwrt
+git clone -b openwrt-21.02 --single-branch https://github.com/openwrt/openwrt.git openwrt
 
 svn co https://github.com/Lienol/openwrt/trunk/tools/ucl openwrt/tools/ucl
 svn co https://github.com/Lienol/openwrt/trunk/tools/upx openwrt/tools/upx
@@ -21,8 +21,8 @@ sed -i '$a src-git xiaorouji https://github.com/xiaorouji/openwrt-passwall.git' 
 
 wget -q -O - https://github.com/upx/upx/releases/download/v3.96/upx-3.96-amd64_linux.tar.xz | tar -Jx --strip 1 -f - -C staging_dir/host/bin upx-3.96-amd64_linux/upx
 
-mv ../config/xwrt_mt7621_hiwifi_hc5962.dts target/linux/ramips/dts/mt7621_hiwifi_hc5962.dts
-mv ../config/xwrt_02_network target/linux/ramips/mt7621/base-files/etc/board.d/02_network
+#mv ../config/xwrt_mt7621_hiwifi_hc5962.dts target/linux/ramips/dts/mt7621_hiwifi_hc5962.dts
+#mv ../config/xwrt_02_network target/linux/ramips/mt7621/base-files/etc/board.d/02_network
 sed -i "s/hiwifi_hc5962/cmcc_an1201l/g" `grep hiwifi_hc5962 -rl target`
 sed -i "s/HC5962/AN1201L/g" `grep HC5962 -rl target`
 sed -i "s/hc5962/an1201l/g" `grep hc5962 -rl target`
@@ -57,4 +57,4 @@ sed -i 's/disabled=1/disabled=0/g' package/kernel/mac80211/files/lib/wifi/mac802
 #sed -i '/exit 0/i\ifdown lan && ifup lan' package/default-settings/files/zzz-default-settings
 
 #加载config
-[ -e ../config/an1201l-xwrt.config ] && mv -f ../config/an1201l-xwrt.config .config
+[ -e ../config/an1201l-openwrt.config ] && mv -f ../config/an1201l-openwrt.config .config
