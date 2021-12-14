@@ -11,8 +11,8 @@ cd openwrt
 ./scripts/feeds update -a
 ./scripts/feeds install -a
 
-mv ../config/imm_mt7621_hiwifi_hc5962.dts target/linux/ramips/dts/mt7621_hiwifi_hc5962.dts
-mv ../config/imm_02_network target/linux/ramips/mt7621/base-files/etc/board.d/02_network
+mv ../config/immortalwrt_mt7621_hiwifi_hc5962.dts target/linux/ramips/dts/mt7621_hiwifi_hc5962.dts
+mv ../config/immortalwrt_02_network target/linux/ramips/mt7621/base-files/etc/board.d/02_network
 sed -i "s/hiwifi_hc5962/cmcc_an1201l/g" `grep hiwifi_hc5962 -rl target`
 sed -i "s/HC5962/AN1201L/g" `grep HC5962 -rl target`
 sed -i "s/hc5962/an1201l/g" `grep hc5962 -rl target`
