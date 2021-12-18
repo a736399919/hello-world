@@ -15,7 +15,7 @@ sed -i '$a src-git xiaorouji https://github.com/xiaorouji/openwrt-passwall.git' 
 ./scripts/feeds update -a
 ./scripts/feeds install -a
 
-chmod 755 ../config/immortalwrt_02_network
+chmod 755 ../config/lienol_02_network
 mv ../config/lienol_mt7621_hiwifi_hc5962.dts target/linux/ramips/dts/mt7621_hiwifi_hc5962.dts
 mv ../config/lienol_02_network target/linux/ramips/mt7621/base-files/etc/board.d/02_network
 sed -i "s/hiwifi_hc5962/cmcc_an1201l/g" `grep hiwifi_hc5962 -rl target`
@@ -27,7 +27,7 @@ cp target/linux/ramips/dts/mt7621_hiwifi_hc5962.dts target/linux/ramips/dts/mt76
 touch target/linux/*/Makefile
 
 #添加自定义插件
-git clone https://github.com/small-5/luci-app-adblock-plus.git package/luci-app-adblock-plus
+#git clone https://github.com/small-5/luci-app-adblock-plus.git package/luci-app-adblock-plus
 git clone https://github.com/ntlf9t/luci-app-easymesh package/luci-app-easymesh
 #添加主题
 git clone https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon-2.2.9
