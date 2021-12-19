@@ -35,4 +35,4 @@ sed -i 's/disabled=1/disabled=0/g' package/kernel/mac80211/files/lib/wifi/mac802
 rm -rf package/base-files/files/etc/banner
 cp -f ../banner-miwifi package/base-files/files/etc/banner
 #加载config
-[ -e ../config/Y1_Lienol.config ] && mv -f ../config/Y1_Lienol.config .config
+[ -e ../Y1_Lienol.config ] && mv -f ../Y1_Lienol.config .config
