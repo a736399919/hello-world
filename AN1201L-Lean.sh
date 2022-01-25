@@ -13,15 +13,16 @@ sed -i '$a src-git xiaorouji https://github.com/xiaorouji/openwrt-passwall.git' 
 ./scripts/feeds update -a
 ./scripts/feeds install -a
 
-chmod 755 ../config/immortalwrt_02_network
-mv ../config/lean_mt7621_hiwifi_hc5962.dts target/linux/ramips/dts/mt7621_hiwifi_hc5962.dts
+chmod 755 ../config/lean_02_network
 mv ../config/lean_02_network target/linux/ramips/mt7621/base-files/etc/board.d/02_network
-sed -i "s/hiwifi_hc5962/cmcc_an1201l/g" `grep hiwifi_hc5962 -rl target`
-sed -i "s/HC5962/AN1201L/g" `grep HC5962 -rl target`
-sed -i "s/hc5962/an1201l/g" `grep hc5962 -rl target`
-sed -i "s/HiWiFi/CMCC/g" `grep HiWiFi -rl target`
-sed -i "s/hiwifi/cmcc/g" `grep hiwifi -rl target`
-cp target/linux/ramips/dts/mt7621_hiwifi_hc5962.dts target/linux/ramips/dts/mt7621_cmcc_an1201l.dts
+sed -i "s/xiaomi_mi-router-ac2100/cmcc_an1201l/g" `grep xiaomi_mi-router-ac2100 -rl target`
+sed -i "s/Mi Router AC2100/AN1201L/g" `grep Mi Router AC2100 -rl target`
+sed -i "s/mi-router-ac2100/an1201l/g" `grep mi-router-ac2100 -rl target`
+sed -i "s/Xiaomi/CMCC/g" `grep Xiaomi -rl target`
+sed -i "s/xiaomi/cmcc/g" `grep xiaomi -rl target`
+cp target/linux/ramips/dts/mt7621_xiaomi_mi-router-ac2100.dts target/linux/ramips/dts/mt7621_cmcc_an1201l.dts
+cp target/linux/ramips/dts/mt7621_xiaomi_router-ac2100.dtsi target/linux/ramips/dts/mt7621_cmcc_router-ac2100.dtsi
+cp target/linux/ramips/dts/mt7621_xiaomi_nand_128m.dtsi target/linux/ramips/dts/mt7621_cmcc_nand_128m.dtsi
 touch target/linux/*/Makefile
 
 #添加自定义插件
@@ -44,15 +45,5 @@ sed -i 's/OpenWrt/AN1201L/g' package/kernel/mac80211/files/lib/wifi/mac80211.sh
 sed -i 's/disabled=1/disabled=0/g' package/kernel/mac80211/files/lib/wifi/mac80211.sh
 #修改时区
 #sed -i "s/'UTC'/'CST-8'\n        set system.@system[-1].zonename='Asia\/Shanghai'/g" package/base-files/files/bin/config_generate
-
-sed -i '/exit 0/i\uci set network.wan.macaddr=F0:68:65:0C:51:98' package/lean/default-settings/files/zzz-default-settings
-sed -i '/exit 0/i\uci set network.lan.macaddr=F0:68:65:0C:51:97' package/lean/default-settings/files/zzz-default-settings
-sed -i '/exit 0/i\uci commit network' package/lean/default-settings/files/zzz-default-settings
-sed -i '/exit 0/i\ifdown wan && ifup wan' package/lean/default-settings/files/zzz-default-settings
-sed -i '/exit 0/i\ifdown lan && ifup lan' package/lean/default-settings/files/zzz-default-settings
-
-
-
-
 #加载config
 [ -e ../config/an1201l-lean.config ] && mv -f ../config/an1201l-lean.config .config
