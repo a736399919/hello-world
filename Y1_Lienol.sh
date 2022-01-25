@@ -6,7 +6,7 @@
 #   Blog: https://p3terx.com
 #=================================================
 #克隆源码
-git clone https://github.com/coolsnowwolf/lede openwrt
+git clone -b 21.02 --single-branch https://github.com/Lienol/openwrt openwrt
 cd openwrt
 #添加passwall
 sed -i '$a src-git xiaorouji https://github.com/xiaorouji/openwrt-passwall.git' feeds.conf.default
@@ -35,4 +35,4 @@ sed -i 's/disabled=1/disabled=0/g' package/kernel/mac80211/files/lib/wifi/mac802
 rm -rf package/base-files/files/etc/banner
 cp -f ../banner-miwifi package/base-files/files/etc/banner
 #加载config
-[ -e ../y1_lede.config ] && mv -f ../y1_lede.config .config
+[ -e ../y1_lienol.config ] && mv -f ../y1_lienol.config .config
