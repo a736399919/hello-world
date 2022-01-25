@@ -39,4 +39,4 @@ cp -f ../banner-miwifi package/base-files/files/etc/banner
 #加载config
 #[ -e ../y1_lienol.config ] && mv -f ../y1_lienol.config .config
 #[ -e ../y1-immortalwrt.config ] && mv -f ../y1-immortalwrt.config .config
-[ -e ../y1-lienol-4.14.config.config ] && mv -f ../y1-lienol-4.14.config .config
+[ -e ../y1-lienol-4.14.config ] && mv -f ../y1-lienol-4.14.config .config
