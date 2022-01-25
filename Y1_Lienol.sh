@@ -6,13 +6,14 @@
 #   Blog: https://p3terx.com
 #=================================================
 #克隆源码
-git clone -b 21.02 --single-branch https://github.com/Lienol/openwrt openwrt
+#git clone -b 21.02 --single-branch https://github.com/Lienol/openwrt openwrt
+git clone -b openwrt-18.06 --single-branch https://github.com/immortalwrt/immortalwrt openwrt
 cd openwrt
 #添加passwall
-sed -i '$a src-git xiaorouji https://github.com/xiaorouji/openwrt-passwall.git' feeds.conf.default
-./scripts/feeds clean
-./scripts/feeds update -a
-./scripts/feeds install -a
+#sed -i '$a src-git xiaorouji https://github.com/xiaorouji/openwrt-passwall.git' feeds.conf.default
+#./scripts/feeds clean
+#./scripts/feeds update -a
+#./scripts/feeds install -a
 
 #添加自定义插件
 git clone https://github.com/ntlf9t/luci-app-easymesh package/luci-app-easymesh
@@ -35,4 +36,5 @@ sed -i 's/disabled=1/disabled=0/g' package/kernel/mac80211/files/lib/wifi/mac802
 rm -rf package/base-files/files/etc/banner
 cp -f ../banner-miwifi package/base-files/files/etc/banner
 #加载config
-[ -e ../y1_lienol.config ] && mv -f ../y1_lienol.config .config
+#[ -e ../y1_lienol.config ] && mv -f ../y1_lienol.config .config
+[ -e ../y1-immortalwrt.config ] && mv -f ../y1-immortalwrt.config .config
