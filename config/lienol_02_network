@@ -24,10 +24,11 @@ ramips_setup_interfaces()
 		;;
 	ampedwireless,ally-r1900k|\
 	gehua,ghl-r-001|\
+	hiwifi,hc5962|\
 	xiaomi,mi-router-3-pro|\
 	xiaomi,mi-router-ac2100|\
 	xiaomi,redmi-router-ac2100)
-		ucidef_set_interfaces_lan_wan "lan1 lan2 lan3" "wan"
+		ucidef_set_interfaces_lan_wan "lan1 lan2" "wan"
 		;;
 	asiarf,ap7621-001|\
 	winstars,ws-wn583a6)
@@ -42,9 +43,6 @@ ramips_setup_interfaces()
 	xiaomi,mi-router-3g-v2|\
 	xiaomi,mi-router-4|\
 	xiaomi,mi-router-4a-gigabit)
-		ucidef_set_interfaces_lan_wan "lan1 lan2" "wan"
-		;;
-        hiwifi,hc5962)
 		ucidef_set_interfaces_lan_wan "lan1 lan2" "wan"
 		;;
 	gnubee,gb-pc1|\
@@ -69,9 +67,6 @@ ramips_setup_interfaces()
 		;;
 	ubnt,edgerouter-x-sfp)
 		ucidef_set_interfaces_lan_wan "eth1 eth2 eth3 eth4 eth5" "eth0"
-		;;
-	ubnt,usw-flex)
-		ucidef_set_interface_lan "lan1 lan2 lan3 lan4 lan5"
 		;;
 	zyxel,nr7101)
 		ucidef_set_interfaces_lan_wan "lan" "wan"
@@ -149,8 +144,7 @@ ramips_setup_macs()
 	linksys,ea7300-v1|\
 	linksys,ea7300-v2|\
 	linksys,ea7500-v2|\
-	linksys,ea8100-v1|\
-	linksys,ea8100-v2)
+	linksys,ea8100-v1)
 		lan_mac=$(mtd_get_mac_ascii devinfo hw_mac_addr)
 		wan_mac=$lan_mac
 		label_mac=$lan_mac
