@@ -17,6 +17,7 @@ sed -i '$a src-git xiaorouji https://github.com/xiaorouji/openwrt-passwall.git' 
 
 chmod 755 ../config/lienol_02_network
 mv ../config/lienol_mt7621_xiaomi_router-ac2100.dtsi target/linux/ramips/dts/mt7621_xiaomi_router-ac2100.dtsi
+mv ../config/lienol_mt7621_xiaomi_mi-router-3g.dts target/linux/ramips/dts/mt7621_xiaomi_mi-router-3g.dts
 mv ../config/lienol_02_network target/linux/ramips/mt7621/base-files/etc/board.d/02_network
 #sed -i "s/hiwifi_hc5962/cmcc_an1201l/g" `grep hiwifi_hc5962 -rl target`
 #sed -i "s/HC5962/AN1201L/g" `grep HC5962 -rl target`
