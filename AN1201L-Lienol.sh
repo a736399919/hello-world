@@ -15,6 +15,8 @@ sed -i '$a src-git xiaorouji https://github.com/xiaorouji/openwrt-passwall.git' 
 ./scripts/feeds update -a
 ./scripts/feeds install -a
 
+chmod 755 ../config/pbr_m1_02_network
+mv ../config/pbr_m1_02_network target/linux/ramips/mt7621/base-files/etc/board.d/02_network
 mv ../config/mt7621_d-team_pbr-m1.dts target/linux/ramips/dts/mt7621_d-team_pbr-m1.dts
 #mv ../config/mt7621_xiaomi_mi-router-4a-3g-v2.dtsi target/linux/ramips/dts/mt7621_xiaomi_mi-router-4a-3g-v2.dtsi
 
