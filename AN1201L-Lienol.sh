@@ -15,7 +15,8 @@ sed -i '$a src-git xiaorouji https://github.com/xiaorouji/openwrt-passwall.git' 
 ./scripts/feeds update -a
 ./scripts/feeds install -a
 
-mv ../config/mt7621_d-team_pbr-m1.dts target/linux/ramips/dts/mt7621_d-team_pbr-m1.dts
+#mv ../config/mt7621_d-team_pbr-m1.dts target/linux/ramips/dts/mt7621_d-team_pbr-m1.dts
+mv ../config/mt7621_xiaomi_mi-router-4a-3g-v2.dtsi target/linux/ramips/dts/mt7621_xiaomi_mi-router-4a-3g-v2.dtsi
 
 #添加自定义插件
 git clone https://github.com/small-5/luci-app-adblock-plus.git package/luci-app-adblock-plus
