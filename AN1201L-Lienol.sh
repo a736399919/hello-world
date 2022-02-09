@@ -15,8 +15,8 @@ sed -i '$a src-git xiaorouji https://github.com/xiaorouji/openwrt-passwall.git' 
 ./scripts/feeds update -a
 ./scripts/feeds install -a
 
-#mv ../config/mt7621_d-team_pbr-m1.dts target/linux/ramips/dts/mt7621_d-team_pbr-m1.dts
-mv ../config/mt7621_xiaomi_mi-router-4a-3g-v2.dtsi target/linux/ramips/dts/mt7621_xiaomi_mi-router-4a-3g-v2.dtsi
+mv ../config/mt7621_d-team_pbr-m1.dts target/linux/ramips/dts/mt7621_d-team_pbr-m1.dts
+#mv ../config/mt7621_xiaomi_mi-router-4a-3g-v2.dtsi target/linux/ramips/dts/mt7621_xiaomi_mi-router-4a-3g-v2.dtsi
 
 #添加自定义插件
 git clone https://github.com/small-5/luci-app-adblock-plus.git package/luci-app-adblock-plus
@@ -38,4 +38,4 @@ sed -i 's/disabled=1/disabled=0/g' package/kernel/mac80211/files/lib/wifi/mac802
 #sed -i "s/'UTC'/'CST-8'\n        set system.@system[-1].zonename='Asia\/Shanghai'/g" package/base-files/files/bin/config_generate
 
 #加载config
-[ -e ../mi-r4a.config ] && mv -f ../mi-r4a.config .config
+[ -e ../R4A.config ] && mv -f ../R4A.config .config
