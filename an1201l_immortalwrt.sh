@@ -46,4 +46,4 @@ sed -i 's/disabled=1/disabled=0/g' package/kernel/mac80211/files/lib/wifi/mac802
 #sed -i "s/'UTC'/'CST-8'\n        set system.@system[-1].zonename='Asia\/Shanghai'/g" package/base-files/files/bin/config_generate
 
 #加载config
-[ -e ../config/r4a1.config ] && mv -f ../config/r4a1.config .config
+[ -e ../config/r4a2.config ] && mv -f ../config/r4a2.config .config
