@@ -45,7 +45,7 @@ svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-theme-edge package
 git clone https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon-1.7.2
 
 #修改lan口地址
-sed -i 's/192.168.1.1/192.168.10.1/g' package/base-files/files/bin/config_generate                                  
+sed -i 's/192.168.1.1/192.168.31.1/g' package/base-files/files/bin/config_generate                                  
 #修改机器名称
 sed -i 's/OpenWrt/R4A/g' package/base-files/files/bin/config_generate
 #修改wifi名称
