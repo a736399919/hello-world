@@ -32,6 +32,8 @@ export imsize1=$(expr $imsize1 + 2)
 export imsize1=$(echo $imsize1"s")
 sed -i "$imsize1/IMAGE_SIZE := .*/IMAGE_SIZE := 16064k/" target/linux/ramips/image/mt7621.mk
 
+#更改主机型号，支持中文。 
+sed -i "s/Xiaomi Mi Router 4A Gigabit Edition/辣鸡小米4A千兆版/g" target/linux/ramips/dts/mt7621_xiaomi_mi-router-4a-gigabit.dts
 
 #添加自定义插件
 git clone https://github.com/small-5/luci-app-adblock-plus.git package/luci-app-adblock-plus
